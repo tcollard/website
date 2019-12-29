@@ -9,11 +9,11 @@
                 >{{ tab }}</span>
         </div>
 
-        <div v-if="selectedTab === 'About'">
+        <div v-if="selectedTab === 'A propos'">
             <About></About>
         </div>
 
-        <div v-if="selectedTab === 'Project'">
+        <div v-if="selectedTab === 'Projets'">
             <Project></Project>
         </div>
     </div>
@@ -31,8 +31,8 @@
         },
         data() {
             return {
-                tabs: ['About', 'Project'],
-                selectedTab: 'About',
+                tabs: ['A propos', 'Projets'],
+                selectedTab: 'A propos',
             };
         },
     }

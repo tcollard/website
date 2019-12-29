@@ -1,7 +1,7 @@
 <template>
     <div>
         <span class="introText">
-            <h1>ABOUT</h1>
+            <h1>A propos</h1>
             <p>Thibault Collard étudiant @ 42 depuis 2017</p>
         </span>
         <div class="link">
@@ -17,7 +17,7 @@
         <h2 class="title">Expérience Professionnelle</h2>
         <hr>
         <ul>
-            <Experience v-for="xp in experiences" :key="xp" :xp="xp"></Experience>
+            <Experience v-for="(xp, index) in experiences" :experience="xp" :key="index"></Experience>
         </ul>
     </div>
 </template>

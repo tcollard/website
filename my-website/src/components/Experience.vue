@@ -1,8 +1,8 @@
 <template>
     <span class="experienceBlock">
-        <p class="subtitle">{{ xp.date }} - {{ xp.poste }}</p>
-        <p class="duration">{{ xp.during }} - {{ xp.type }}</p>
-        <span v-html="xp.content"></span>
+        <p class="subtitle">{{ experience.date }} - {{ experience.poste }}</p>
+        <p class="duration">{{ experience.during }} - {{ experience.type }}</p>
+        <span v-html="experience.content"></span>
     </span>
 </template>
 
@@ -10,8 +10,8 @@
     export default ({
         name: 'Experience',
         props: {
-            xp:{
-                type: Array,
+            experience:{
+                type: Object,
                 required: true,
             },
         },
@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 15px;
+        margin: 25px;
     }
     
     .contentText {
