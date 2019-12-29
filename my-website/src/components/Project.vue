@@ -13,8 +13,15 @@
             >{{ type }}</span>
         </div>
         <div v-if="selectedType === '42'" class="contentList">
-            <p>42 Project</p>
+            <p class="contentListTitle">42 Project</p>
             <span class="description"> {{ descriptions.school }}</span>
+            <div v-for="(project, index) in projects"
+                :key="index" v-show="project.type === '42'"
+                @click="selectedProject = (selectedProject && selectedProject === project.name) ? null : project.name"
+                class="projectTitle">
+                {{ project.name }}
+                <ProjectDetail v-show="selectedProject === project.name" :detail="project"></ProjectDetail>
+            </div>
         </div>
         <div v-if="selectedType === 'Personnel'" class="contentList">
             <p>Project Personnel</p>
@@ -25,8 +32,13 @@
 </template>
 
 <script lang="ts">
+    import ProjectDetail from './ProjectDetail.vue';
+
     export default ({
         name: 'Project',
+        components: {
+            ProjectDetail,
+        },
         data() {
             return {
                 types: ['42', 'Personnel'],
@@ -37,7 +49,7 @@
                             name: '42sh',
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
-                            img: null,
+                            img: '42sh.png',
                         },
                         {
                             type: '42',
@@ -54,6 +66,7 @@
                             img: null,
                         },
                     ],
+                selectedProject: null,
                 descriptions: {
                     school: 'Projets réaliser dans ma formation à 42.',
                     perso: 'Projets personnelles, afin de decouvrir de nouveaux languages et de nouvelles technologies.',
@@ -78,9 +91,22 @@
         align-items: center;
     }
 
+    .contentListTitle {
+        /* font-weight: bold; */
+    }
+
+    .projectTitle {
+        border: 1px solid grey;
+        border-radius: 10px;
+        width: 50%;
+        height: 10%;
+        margin-bottom: 8px;
+        text-align: center;
+    }
     .type {
         cursor: pointer;
         margin: 15px;
+        font-weight: bold;
     }
 
     .activeType {
