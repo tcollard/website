@@ -12,15 +12,17 @@
                 :key="type"
             >{{ type }}</span>
         </div>
-        <div v-if="selectedType === '42'" class="contentList">
+        <div v-show="selectedType === '42'" class="contentList">
             <p class="contentListTitle">42 Project</p>
             <span class="description"> {{ descriptions.school }}</span>
             <div v-for="(project, index) in projects"
                 :key="index" v-show="project.type === '42'"
-                @click="selectedProject = (selectedProject && selectedProject === project.name) ? null : project.name"
+                @click="project.state = (project.state === 'close') ? 'open' : 'close'"
                 class="projectTitle">
-                {{ project.name }}
-                <ProjectDetail v-show="selectedProject === project.name" :detail="project"></ProjectDetail>
+                <p class="foldTitle">{{ project.name }}</p>
+                <transition name="slide-fade">
+                    <ProjectDetail v-show="project.state === 'open'" :detail="project"></ProjectDetail>
+                </transition>
             </div>
         </div>
         <div v-if="selectedType === 'Personnel'" class="contentList">
@@ -49,7 +51,16 @@
                             name: '42sh',
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
-                            img: '42sh.png',
+                            img: '../assets/projects/42sh.png',
+                            state: 'close',
+                        },
+                        {
+                            type: '42',
+                            name: 'Truc',
+                            link: 'https://www.google.com',
+                            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
+                            img: '../assets/projects/42sh.png',
+                            state: 'close',
                         },
                         {
                             type: '42',
@@ -57,6 +68,7 @@
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
                             img: null,
+                            state: 'close',
                         },
                         {
                             type: 'perso',
@@ -64,9 +76,10 @@
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
                             img: null,
+                            state: 'close',
                         },
                     ],
-                selectedProject: null,
+                // selectedProject: null,
                 descriptions: {
                     school: 'Projets réaliser dans ma formation à 42.',
                     perso: 'Projets personnelles, afin de decouvrir de nouveaux languages et de nouvelles technologies.',
@@ -113,4 +126,21 @@
         color: red;
     }
 
+    .foldTitle {
+        cursor: pointer;
+        margin: 2px;
+    }
+
+    .slide-fade-enter-active {
+        transition: all .3s ease;
+    }
+
+    .slide-fade-leave-active {
+        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+
+    .slide-fade-enter, .slide-fade-leave {
+        transform: translateY(-20px);
+        opacity: 0;
+    } 
 </style>
