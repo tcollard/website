@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-    <Description></Description>
-    <Skills></Skills>
-    <PortfolioResume></PortfolioResume>
-    <Experience></Experience>
-    <Contact></Contact>
+    <Description id="description"></Description>
+    <Skills id="skills"></Skills>
+    <PortfolioResume id="portfolio"></PortfolioResume>
+    <Experience id="experience"></Experience>
+    <Contact id="contact"></Contact>
   </div>
 </template>
 
@@ -26,8 +26,9 @@ export default {
     PortfolioResume,
     Contact,
     Experience,
-  }
+  },
 }
+
 </script>
 
 <style>

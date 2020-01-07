@@ -23,8 +23,6 @@ export default {
 .description {
     display: flex;
     flex-direction: column;
-    /* align-content: center;
-    justify-content: center; */
     padding-bottom: 10%;
     padding-top: 10%;
 }
@@ -32,8 +30,6 @@ export default {
 .title {
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-content: center; */
     text-align: center;
     margin-bottom: 5%;
 }

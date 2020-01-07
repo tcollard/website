@@ -23,6 +23,12 @@ Portfolio (project 3 type -> link)
 
 Step 4:
 Experience
+    Style => Arborescence in tha middle
+    left and right each time
+    stop dot with DATE
+    ENTREPRISE NAME
+    POSTE
+    Description tranquil
 
 Step 5:
 Contact -> linkedIn / Github / Mail

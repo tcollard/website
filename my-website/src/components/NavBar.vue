@@ -1,46 +1,17 @@
 <template>
     <div class="nav-bar">
-        <span>CV</span>
-        <span>HOME</span>
-        <span>SKILLS</span>
-        <span>EXPERIENCE</span>
-        <span>PORTFOLIO</span>
-        <span>CONTACT</span>
-        <!-- <div class="nav-bar">
-                <span class="tabs"
-                    :class="{ activeTab: selectedTab === tab }"
-                    v-for="tab in tabs"
-                    @click="selectedTab = tab"
-                    :key="tab"
-                >{{ tab }}</span>
-        </div>
-
-        <div v-if="selectedTab === 'A propos'">
-            <About></About>
-        </div>
-
-        <div v-if="selectedTab === 'Projets'">
-            <Project></Project>
-        </div> -->
+        <span class="ref">CV</span>
+        <a class="ref" v-scroll-to="'#description'">HOME</a>
+        <a class="ref" v-scroll-to="'#skills'">SKILLS</a>
+        <a class="ref" v-scroll-to="'#experience'">EXPERIENCE</a>
+        <a class="ref" v-scroll-to="'#portfolio'">PORTFOLIO</a>
+        <a class="ref" v-scroll-to="'#contact'">CONTACT</a>
     </div>
 </template>
 
 <script lang="ts">
-    // import Project from './Project.vue';
-    // import About from './About.vue';
-
     export default {
         name: 'NavBar',
-        components: {
-            // Project,
-            // About,
-        },
-        data() {
-            return {
-                tabs: ['A propos', 'Projets'],
-                selectedTab: 'A propos',
-            };
-        },
     }
 </script>
 
@@ -53,17 +24,13 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    .ref {
+        cursor: pointer;
+        text-decoration: none;
         color: grey;
         font-size: 12px;
     }
 
-    .tabs {
-        font-size: 2em;
-        cursor: pointer;
-    }
-
-    .activeTab {
-        color: red;
-        /* text-decoration: underline; */
-    }
 </style>
