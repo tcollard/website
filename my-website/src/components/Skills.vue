@@ -64,6 +64,8 @@ export default {
     text-align: center;
     margin-left: 10%;
     margin-right: 10%;
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 
 .listSkills {

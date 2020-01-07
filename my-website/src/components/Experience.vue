@@ -1,25 +1,37 @@
 <template>
-    <span class="experienceBlock">
+    <div class="experience">
+        <h1>Experience</h1>
+    </div>
+    <!-- <span class="experienceBlock">
         <p class="subtitle">{{ experience.date }} - {{ experience.poste }}</p>
         <p class="duration">{{ experience.during }} - {{ experience.type }}</p>
         <span v-html="experience.content"></span>
-    </span>
+    </span> -->
 </template>
 
 <script lang="ts">
     export default ({
         name: 'Experience',
-        props: {
-            experience:{
-                type: Object,
-                required: true,
-            },
-        },
+        // props: {
+        //     experience:{
+        //         type: Object,
+        //         required: true,
+        //     },
+        // },
     })
 </script>
 
 <style>
-    .subtitle {
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+    /* .subtitle {
         font-size: 1.17em;
         font-weight: bold;
         margin: 5px;
@@ -41,5 +53,5 @@
     .contentText {
         text-decoration: none;
         color: black;
-    }
+    } */
 </style>

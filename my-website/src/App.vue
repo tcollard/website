@@ -4,7 +4,7 @@
     <Description></Description>
     <Skills></Skills>
     <PortfolioResume></PortfolioResume>
-    <Experiences></Experiences>
+    <Experience></Experience>
     <Contact></Contact>
   </div>
 </template>
@@ -15,6 +15,7 @@ import Description from './components/Description.vue'
 import Skills from './components/Skills.vue'
 import PortfolioResume from './components/PortfolioResume.vue'
 import Contact from './components/Contact.vue'
+import Experience from './components/Experience.vue'
 
 export default {
   name: 'app',
@@ -24,6 +25,7 @@ export default {
     Skills,
     PortfolioResume,
     Contact,
+    Experience,
   }
 }
 </script>

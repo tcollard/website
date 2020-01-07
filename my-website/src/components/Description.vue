@@ -25,6 +25,8 @@ export default {
     flex-direction: column;
     /* align-content: center;
     justify-content: center; */
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 
 .title {

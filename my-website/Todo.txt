@@ -8,6 +8,15 @@ Description
 
 Step 2:
 Skills
+C => 90%
+UNIX/SHELL => 90%
+DART => 60%
+ANGULAR => 70%
+VueJS => 70%
+HTML/CSS => 80%
+JS/nodeJS => 85%
+
+
 
 Step 3:
 Portfolio (project 3 type -> link)
