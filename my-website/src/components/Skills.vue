@@ -1,8 +1,10 @@
 <template>
     <div class="skills">
         <h1>Skills</h1>
-        <div v-for="skill in skills" :key="skill" class="listSkills">
-            <ProgressBar :skill="skill"></ProgressBar>
+        <div class="listSkills">
+            <div v-for="skill in skills" :key="skill" class="oneSkill">
+                <ProgressBar :skill="skill"></ProgressBar>
+            </div>
         </div>
     </div>
 </template>
@@ -20,31 +22,31 @@ export default {
             skills: [
                 {
                     name: 'C',
-                    rate: '90',
+                    rate: 90,
                 },
                                 {
                     name: 'UNIX / SHELL',
-                    rate: '90',
+                    rate: 90,
                 },
                 {
                     name: 'DART /FLUTTER',
-                    rate: '60',
+                    rate: 60,
                 },
                 {
                     name: 'ANGULAR',
-                    rate: '70',
+                    rate: 70,
                 },
                 {
-                    name: 'VueJs',
-                    rate: '70',
+                    name: 'VueJS',
+                    rate: 70,
                 },
                 {
                     name: 'HTML / CSS',
-                    rate: '80',
+                    rate: 80,
                 },
                 {
                     name: 'JS / NodeJS',
-                    rate: '85',
+                    rate: 85,
                 },
 
             ]
@@ -67,8 +69,15 @@ export default {
 .listSkills {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+}
+
+.oneSkill {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* align-content: center;
     justify-content: center;
-    text-align: center;
+    text-align: center; */
 }
 </style>
