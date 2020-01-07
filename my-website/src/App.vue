@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <NavBar></NavBar>
+    <a v-scroll-to="'#navbar'" class="floatingBtn"></a>
+    <NavBar id="navbar"></NavBar>
     <Description id="description"></Description>
     <Skills id="skills"></Skills>
     <PortfolioResume id="portfolio"></PortfolioResume>
@@ -43,8 +44,37 @@ export default {
 
 body {
   margin: 0;
-  /* background-color: rgb(51, 59, 80); */
   background-color: rgb(80, 90, 125);
   color: white;
 }
+
+.floatingBtn {
+  color:orange;
+  cursor: pointer;
+	position:fixed;
+  bottom: 8%;
+  right: 7%;
+	border-color:orange;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+
+.floatingBtn:before {
+  content:'▲';
+  text-align: center;
+	font-size:1.9em;
+	position: inherit;;
+	border:solid 3px orange;
+	border-radius:10em;
+	width:1.5em;
+	height:1.5em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+
+.floatingBtn:hover:before{
+  transform: rotate(360deg);
+}
+
 </style>

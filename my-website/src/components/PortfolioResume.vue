@@ -17,7 +17,6 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 10%;
-    padding-top: 10%;
+    margin: 15%;
 }
 </style>

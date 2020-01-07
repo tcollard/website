@@ -6,6 +6,7 @@
                 <div class="leftSide">
                     <ExperienceDetail  v-if="index % 2 === 0" :experience="experience" :index="index"></experienceDetail>
                 </div>
+                <div class="line"></div>
                 <div class="rightSide">
                     <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
                 </div>
@@ -74,24 +75,27 @@ export default ({
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 10%;
-    padding-top: 10%;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin: 15%;
 }
 
 .timeLine {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
 }
 
 .leftSide, .rightSide {
-    width: 50%;
+    width: 49%;
 }
 
 .time {
     display: flex;
     flex-direction: row;
+}
+
+.line {
+    width: 1%;
+    background-color: orange;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 </style>

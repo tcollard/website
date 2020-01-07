@@ -30,5 +30,27 @@ Experience
     POSTE
     Description tranquil
 
-Step 5:
+5/ = Step 5:
 Contact -> linkedIn / Github / Mail
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            TRANSITION
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Important declanche on first hover or when it's in tha scope of the window
+3/ = Skills evolution bar
+4/ = Experience Opacity Apearance + Slide down
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            STYLE
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+1/ = Timeline add date point
+2/ = Experiences / Job => space between paragraph and font Style
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            TRY IT
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+6/ = Github page on tcollard.github.io

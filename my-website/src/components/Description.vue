@@ -23,8 +23,7 @@ export default {
 .description {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10%;
-    padding-top: 10%;
+    margin: 15%;
 }
 
 .title {
@@ -40,8 +39,6 @@ export default {
   justify-content: center;
   align-content: center;
   padding: 2%;
-  margin-left: 15%;
-  margin-right: 15%;
   border-radius: 10px;
   background-color: rgb(51, 59, 80);
   text-align: center;
