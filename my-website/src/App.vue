@@ -13,8 +13,8 @@
 import NavBar from './components/NavBar.vue'
 import Description from './components/Description.vue'
 import Skills from './components/Skills.vue'
-import PortfolioResume from './components/ProfolioResume.vue'
-import Contact from './components/contact.vue'
+import PortfolioResume from './components/PortfolioResume.vue'
+import Contact from './components/Contact.vue'
 
 export default {
   name: 'app',
@@ -40,5 +40,8 @@ export default {
 
 body {
   margin: 0;
+  /* background-color: rgb(51, 59, 80); */
+  background-color: rgb(80, 90, 125);
+  color: white;
 }
 </style>

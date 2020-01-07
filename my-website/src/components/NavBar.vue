@@ -1,6 +1,12 @@
 <template>
-    <div>
-        <div class="nav-bar">
+    <div class="nav-bar">
+        <span>CV</span>
+        <span>HOME</span>
+        <span>SKILLS</span>
+        <span>EXPERIENCE</span>
+        <span>PORTFOLIO</span>
+        <span>CONTACT</span>
+        <!-- <div class="nav-bar">
                 <span class="tabs"
                     :class="{ activeTab: selectedTab === tab }"
                     v-for="tab in tabs"
@@ -15,19 +21,19 @@
 
         <div v-if="selectedTab === 'Projets'">
             <Project></Project>
-        </div>
+        </div> -->
     </div>
 </template>
 
 <script lang="ts">
-    import Project from './Project.vue';
-    import About from './About.vue';
+    // import Project from './Project.vue';
+    // import About from './About.vue';
 
     export default {
         name: 'NavBar',
         components: {
-            Project,
-            About,
+            // Project,
+            // About,
         },
         data() {
             return {
@@ -40,13 +46,15 @@
 
 <style scoped>
     .nav-bar {
-        background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+        /* background: linear-gradient(-90deg, #84CF6A, #16C0B0); */
         height: 60px;
         margin-bottom: 15px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        color: grey;
+        font-size: 12px;
     }
 
     .tabs {
