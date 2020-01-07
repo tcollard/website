@@ -19,7 +19,7 @@
                 :key="index" v-show="project.type === '42'"
                 @click="project.state = (project.state === 'close') ? 'open' : 'close'"
                 class="projectTitle">
-                <p class="foldTitle">{{ project.name }}</p>
+                    <p class="foldTitle">{{ project.name }}</p>
                 <transition name="slide-fade">
                     <ProjectDetail v-show="project.state === 'open'" :detail="project"></ProjectDetail>
                 </transition>
@@ -51,7 +51,7 @@
                             name: '42sh',
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
-                            img: '../assets/projects/42sh.png',
+                            img: '../assets/logo.png',
                             state: 'close',
                         },
                         {
@@ -59,7 +59,7 @@
                             name: 'Truc',
                             link: 'https://www.google.com',
                             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident reiciendis nulla illum eum, quos in vero sunt hic mollitia, excepturi odio sequi quasi dolorem nostrum perferendis facilis labore at laboriosam.',
-                            img: '../assets/projects/42sh.png',
+                            img: '../assets/logo.png',
                             state: 'close',
                         },
                         {

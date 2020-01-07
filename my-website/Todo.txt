@@ -1,0 +1,19 @@
+Portfolio:
+
+=> Single page:
+NavBar -> link download CV / Step ...
+
+Step 1:
+Description
+
+Step 2:
+Skills
+
+Step 3:
+Portfolio (project 3 type -> link)
+
+Step 4:
+Experience
+
+Step 5:
+Contact -> linkedIn / Github / Mail

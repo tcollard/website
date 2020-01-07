@@ -2,8 +2,9 @@
     <div>
         {{detail.img}}
         <p>{{ detail.description }}</p>
-        <img v-show="detail.img" class="img" :src="detail.img" :alt="detail.name"/>
+        <img v-show="detail.img" class="img" :src="'../assets/' + detail.img" :alt="detail.name"/>
         <a :href="detail.link" target="_blank">{{ detail.link }}</a>
+        <img v-show="detail.img" class="img" src="../assets/linkedIn.svg" alt="linkedIn">
     </div>
 </template>
 
