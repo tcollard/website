@@ -62,8 +62,8 @@ export default {
     justify-content: center;
     align-content: center;
     text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     padding-bottom: 10%;
     padding-top: 10%;
 }
@@ -78,8 +78,5 @@ export default {
     width: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
-    /* align-content: center;
-    justify-content: center;
-    text-align: center; */
 }
 </style>
