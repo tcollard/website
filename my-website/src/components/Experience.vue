@@ -2,31 +2,18 @@
     <div class="experience">
         <h1>Experience</h1>
         <div class="timeLine" v-for="(experience, index) in experiences" :key="index">
-            <div class="time">
-                <div class="leftSide">
-                    <ExperienceDetail  v-if="index % 2 === 0" :experience="experience" :index="index"></experienceDetail>
-                </div>
-                <div v-if="index != experiences.length - 1" class="line">
-                    <div class="dot"></div>
-                </div>
-                <div v-else class="endLine">
-                    <div class="dot"></div>
-                </div>
-                <div class="rightSide">
-                    <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
-                </div>
-            </div>
+            <ExperienceContainer :index="index" :experience="experience" :length="experiences.length - 1"></ExperienceContainer>
         </div>
     </div>
 </template>
 
 <script>
-import ExperienceDetail from "./ExperienceDetail.vue";
+import ExperienceContainer from "./ExperienceContainer.vue";
 
 export default ({
     name: 'Experience',
     components: {
-        ExperienceDetail,
+        ExperienceContainer,
     },
     data() {
         return {
@@ -67,9 +54,10 @@ export default ({
                     job: 'Gestionnaire d\'Energie',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
                 },
-            ]
+            ],
+            state: false,
         }
-    }
+    },
 })
 </script>
 
@@ -86,39 +74,5 @@ export default ({
 .timeLine {
     display: flex;
     flex-direction: column;
-}
-
-.leftSide, .rightSide {
-    width: 49%;
-}
-
-.time {
-    display: flex;
-    flex-direction: row;
-}
-
-.line {
-    width: 0.2em;
-    background-color: orange;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.endLine {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.dot {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: orange;
 }
 </style>
