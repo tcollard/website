@@ -30,7 +30,7 @@
         cursor: pointer;
         text-decoration: none;
         color: grey;
-        font-size: 12px;
+        font-size: 18px;
     }
 
 </style>

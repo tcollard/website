@@ -3,8 +3,8 @@
         <span class='title'>
             {{skill.name}}
         </span>
-        <div class="bar">
-            <div class="coloredBar" :style="{width: skill.rate + '%'}"></div>
+        <div class="bar" v-bind:id="skill.name + '-bar'">
+            <div v-bind:id="skill.name + '-content'" class="coloredBar" v-on:scroll="isInView"></div>
         </div>
         <span class="rate">{{skill.rate}} %</span>
     </div>
@@ -19,6 +19,36 @@ export default {
             required: true,
         },
     },
+    data() {
+        return {
+            state: false,
+        }
+    },
+    created() {
+        document.addEventListener('scroll', this.isInView);
+    },
+    destroyed() {
+        document.removeEventListener('scroll', this.isInView);
+    },
+    methods: {
+        isInView() {
+            let elBar = document.getElementById(this.skill.name + '-bar');
+            let elContent = document.getElementById(this.skill.name + '-content');
+            const scroll = window.scrollY || window.pageYOffset
+            const viewport = {
+                top: scroll,
+                bottom: scroll + window.innerHeight,
+            }
+
+            if (!this.state && elBar.offsetTop > viewport.top && elBar.offsetTop < viewport.bottom) {
+                this.state = !this.state;
+                elContent.style.width = this.skill.rate + '%';
+                elContent.classList.add('barTransition');
+                return true;
+            }
+            return false;
+        }
+    }
 }
 </script>
 
@@ -47,6 +77,19 @@ export default {
     background-color: orange;
     align-self: flex-start;
     height: 10px;
+}
+
+.barTransition {
+    animation-duration: 2s;
+    animation-name: loadBar;
+    animation-iteration-count: 1;
+}
+
+@keyframes loadBar {
+    from {
+        opacity: 0;
+        width: 0px;
+    }
 }
 
 .rate {
