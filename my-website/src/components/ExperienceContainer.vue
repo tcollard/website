@@ -37,6 +37,11 @@ export default {
             required: true,
         },
     },
+    data() {
+        return {
+            state: false,
+        }
+    },
     created() {
         document.addEventListener('scroll', this.isInView);
     },
@@ -55,7 +60,8 @@ export default {
 
             if (!this.state && elDot.offsetTop > viewport.top && elDot.offsetTop < viewport.bottom) {
                 this.state = !this.state;
-                elDot.style.opacity = 1;
+                // elDot.style.opacity = 1;
+                // elDot.style.visibility = 'hidden';
                 elDot.classList.add('transitionDot');
                 return true;
             }
@@ -76,7 +82,7 @@ export default {
 }
 
 .line {
-    width: 0.2em;
+    width: 2px;
     background-color: orange;
     margin-left: 5%;
     margin-right: 5%;
@@ -86,6 +92,7 @@ export default {
 }
 
 .endLine {
+    width: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,25 +101,39 @@ export default {
 }
 
 .dot {
-    height: 20px;
-    width: 20px;
     border-radius: 50%;
     background-color: orange;
 }
 
 .transitionDot {
     animation-name: dotTransition;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
+    animation-duration: .3s;
     animation-timing-function: ease-in;
-    animation-delay: 0.3ms;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+}
+
+.transitionLine {
+    animation-name: lineTransition;
+    animation-duration: .8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0
 }
 
 @keyframes dotTransition {
     from {
+        height: 2px;
+        width: 2px;
+    }
+    to {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@keyframes lineTransition {
+    from {
         opacity: 0;
-        height: 45px;
-        width: 45px;
     }
 }
 </style>

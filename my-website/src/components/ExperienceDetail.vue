@@ -1,6 +1,5 @@
 <template>
-    <div v-bind:id="experience.date"
-        class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
+    <div v-bind:id="experience.date" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
         <span class="date">{{experience.date}}</span>
         <span class="company">{{experience.company}}</span>
         <span class="job">{{experience.job}}</span>
@@ -65,6 +64,7 @@ export default {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    visibility: hidden;
 }
 
 .date {
@@ -104,23 +104,33 @@ export default {
     animation-name: slideLeft;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: .4s;
+    animation-fill-mode: forwards;
 }
 
 .transitionRight {
     animation-name: slideRight;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    animation-delay: .4s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes slideLeft {
     from {
         opacity: 0;
     }
+    to {
+        visibility: visible;
+    }
 }
 
 @keyframes slideRight {
     from {
         opacity: 0;
+    }
+    to {
+        visibility: visible;
     }
 }
 </style>
