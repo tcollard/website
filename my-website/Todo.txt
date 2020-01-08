@@ -46,8 +46,8 @@ Important declanche on first hover or when it's in tha scope of the window
             STYLE
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-1/ = Timeline add date point
-2/ = Experiences / Job => space between paragraph and font Style
+DONE 1/ = Timeline add date point
+DONE 2/ = Experiences / Job => space between paragraph and font Style
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             TRY IT

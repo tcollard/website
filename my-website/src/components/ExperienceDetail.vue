@@ -34,6 +34,26 @@ export default {
 .date {
     color: orange;
     font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 2%;
+}
+
+.company {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+}
+
+.job {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.description {
+    font-size: 1em;
+    line-height: 1.25rem;
 }
 
 .leftPosition {

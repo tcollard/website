@@ -6,7 +6,12 @@
                 <div class="leftSide">
                     <ExperienceDetail  v-if="index % 2 === 0" :experience="experience" :index="index"></experienceDetail>
                 </div>
-                <div class="line"></div>
+                <div v-if="index != experiences.length - 1" class="line">
+                    <div class="dot"></div>
+                </div>
+                <div v-else class="endLine">
+                    <div class="dot"></div>
+                </div>
                 <div class="rightSide">
                     <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
                 </div>
@@ -93,9 +98,27 @@ export default ({
 }
 
 .line {
-    width: 1%;
+    width: 0.2em;
     background-color: orange;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.endLine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: orange;
 }
 </style>
