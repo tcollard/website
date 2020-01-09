@@ -22,37 +22,37 @@ export default ({
                     date: '2019',
                     company: 'Neocity',
                     job: 'Dev fullStack',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Réalisation d\'application citadinne, cross-platform.'
                 },
                 {
                     date: '2018',
                     company: 'SideProject Iota Amsterdam',
                     job: 'Dev',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Réalisation d\'un PoC sur une smart grid (JS/nodeJs) suite au Hackathon IOTA à 42. Utilisation du réseau IOTA pour effectuer des micro-transactions (données et monétaires) entre les différents acteurs (IoT). Présentation du PoC avec IOTA à Amsterdam lors de la Blockchain Expo Europe 2018'
                 },
                 {
                     date: '2017',
                     company: '42',
                     job: 'Student',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Suivi du cursus de 42, formation en programmation.'
                 },
                 {
                     date: '2015 - 2016',
                     company: 'WHV',
                     job: 'Australia',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Séjour linguistique en Australie : découverte du pays et expériences pro (restauration, manutention, ferme)'
                 },
                 {
                     date: '2013 - 2015',
                     company: 'CEPI Ingenierie',
                     job: 'Charge de Projet / Thermicien',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Réalisation d\'étude thermique (RT 2012), plan et dimensionnement Chauffage Ventilation Climatisation (logiciel Autocad)'
                 },
                 {
                     date: '2012',
                     company: 'Cellulose de Broceliande',
                     job: 'Gestionnaire d\'Energie',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sed iusto hic, maxime totam, officia eveniet saepe dolorem et doloribus repellat harum impedit ipsum distinctio porro rem facere labore, voluptates quas? Quidem cumque voluptatibus dolores vel omnis dignissimos voluptatem architecto doloremque a pariatur, libero, asperiores ab ducimus porro modi impedit natus esse veritatis consequatur dolorem! Eos animi hic corrupti minus odit omnis, numquam sed libero rem, incidunt quisquam quasi aliquam totam similique, accusamus ipsa? Impedit fugit maiores, odit possimus ducimus explicabo repellendus magni iure voluptatibus. Consectetur veritatis hic magnam aliquam in dolor fuga nesciunt atque! Doloribus id hic labore neque.'
+                    description: 'Réalisation d\'un audit énergétique sur le process industriel'
                 },
             ],
             state: false,
@@ -74,5 +74,6 @@ export default ({
 .timeLine {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 </style>

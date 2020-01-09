@@ -3,7 +3,7 @@
         <span class="date">{{experience.date}}</span>
         <span class="company">{{experience.company}}</span>
         <span class="job">{{experience.job}}</span>
-        <span class="description">{{experience.description}}</span>
+        <span class="text">{{experience.description}}</span>
     </div>
 </template>
 
@@ -86,11 +86,6 @@ export default {
     font-size: 1.2em;
     font-weight: bold;
     padding-bottom: 2%;
-}
-
-.description {
-    font-size: 1em;
-    line-height: 1.25rem;
 }
 
 .leftPosition {

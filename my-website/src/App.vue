@@ -61,11 +61,16 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
 html{
   scroll-behavior: smooth;
 }
+
+h1 {
+  font-size: 50px;
+}
+
 #app {
   font-family: 'Roboto Slab', serif;
   display: flex;
@@ -79,7 +84,7 @@ html{
 
 body {
   margin: 0;
-  background-color: rgb(80, 90, 125);
+  background-color: #39394C;
   color: white;
 }
 
@@ -115,12 +120,18 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  background-color: black;
+  background-color: #39394C;
   opacity: 1;
   top: 0;
   z-index: 100;
 }
 
+.text {
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
 #description, #skills, #experience, #portfolio, #contact{
   /* padding-top: 8%; */
 }

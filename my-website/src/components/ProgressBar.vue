@@ -1,12 +1,14 @@
 <template>
     <div class="progress">
-        <span class='title'>
+        <span class='title text'>
             {{skill.name}}
         </span>
         <div class="bar" v-bind:id="skill.name + '-bar'">
-            <div v-bind:id="skill.name + '-content'" class="coloredBar" v-on:scroll="isInView"></div>
+            <div class="barBackground">
+                <div v-bind:id="skill.name + '-content'" class="coloredBar" v-on:scroll="isInView"></div>
+            </div>
         </div>
-        <span class="rate">{{skill.rate}} %</span>
+        <span class="rate text">{{skill.rate}} %</span>
     </div>
 </template>
 
@@ -75,7 +77,6 @@ export default {
     width: 50%;
 }
 .coloredBar {
-    background-color: orange;
     align-self: flex-start;
     height: 10px;
 }
@@ -84,6 +85,8 @@ export default {
     animation-duration: 2s;
     animation-name: loadBar;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: orange;
 }
 
 @keyframes loadBar {
@@ -95,5 +98,12 @@ export default {
 
 .rate {
     width: 25%;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.barBackground {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 </style>
