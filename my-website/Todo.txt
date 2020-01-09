@@ -42,5 +42,4 @@ Contact -> linkedIn / Github / Mail
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             TRANSITION
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-1/ - TimeLine transition wait until first end
-2/ - Header change color on clic (orange)
+1/ - Header change color on clic (orange)

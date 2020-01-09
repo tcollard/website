@@ -1,17 +1,38 @@
 <template>
     <div class="nav-bar">
         <span class="ref">CV</span>
-        <a class="ref" v-scroll-to="'#description'">HOME</a>
-        <a class="ref" v-scroll-to="'#skills'">SKILLS</a>
-        <a class="ref" v-scroll-to="'#experience'">EXPERIENCE</a>
-        <a class="ref" v-scroll-to="'#portfolio'">PORTFOLIO</a>
-        <a class="ref" v-scroll-to="'#contact'">CONTACT</a>
+        <a v-scroll-to="'#description'">HOME</a>
+        <a v-scroll-to="'#skills'">SKILLS</a>
+        <a v-scroll-to="'#experience'">EXPERIENCE</a>
+        <a v-scroll-to="'#portfolio'">PORTFOLIO</a>
+        <a v-scroll-to="'#contact'">CONTACT</a>
     </div>
 </template>
 
 <script lang="ts">
     export default {
         name: 'NavBar',
+        data() {
+            return {
+                selectedElem: null,
+            };
+        },
+        
+        // methods: {
+        //     changeColor(id) {
+        //         console.log('YOYO: ', id) /* eslint-disable-line */
+        //         console.log('YOYO 1: ', this.selectedElem) /* eslint-disable-line */
+        //         let el = document.getElementById(id);
+        //         el.classList.add('select');
+                
+        //         if (this.selectedElem) {
+        //             console.log('YOYO 2: ', this.selectedElem.classList) /* eslint-disable-line */
+
+        //             // this.selectedElem.classList.remove('select');
+        //         }
+        //         this.selectedElem = el;
+        //     }
+        // },
     }
 </script>
 
@@ -24,13 +45,16 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        color: orange;
+        font-size: 18px;
     }
 
     .ref {
         cursor: pointer;
-        text-decoration: none;
-        color: grey;
-        font-size: 18px;
     }
 
+    a {
+        cursor: pointer;
+        color: orange;
+    }
 </style>

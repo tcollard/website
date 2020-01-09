@@ -33,8 +33,10 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: column;
   /* -webkit-font-smoothing: antialiased; */
