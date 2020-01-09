@@ -62,7 +62,7 @@ export default {
     justify-content: center;
     align-content: center;
     text-align: center;
-    margin: 15%;
+    padding: 15%;
 }
 
 .listSkills {

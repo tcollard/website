@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <a v-scroll-to="'#navbar'" class="floatingBtn"></a>
-    <NavBar id="navbar"></NavBar>
+    <NavBar id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
     <Description id="description"></Description>
     <Skills id="skills"></Skills>
     <PortfolioResume id="portfolio"></PortfolioResume>
@@ -28,13 +28,44 @@ export default {
     Contact,
     Experience,
   },
-}
+  data() {
+    return {
+      allId: ['description', 'skills', 'portfolio', 'experience', 'contact'],
+      selectedId: null,
+    }
+  },
+  created() {
+    document.addEventListener('scroll', this.isInView);
+  },
+  destroyed() {
+    document.removeEventListener('scroll', this.isInView);
+  },
+  methods: {
+    isInView() {
+      const scroll = window.scrollY || window.pageYOffset
+        const viewport = {
+          top: scroll,
+            bottom: scroll + window.innerHeight,
+        }
 
+        for (let index = 0; index < this.allId.length; index++) {
+          let el = document.getElementById(this.allId[index]);
+          if (el.offsetTop >= viewport.top && el.offsetTop <= viewport.bottom) {
+            this.selectedId = this.allId[index];
+            return ;
+          }
+        }
+    }
+  }
+}
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 
+html{
+  scroll-behavior: smooth;
+}
 #app {
   font-family: 'Roboto Slab', serif;
   display: flex;
@@ -84,12 +115,13 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  background-color: rgb(80, 90, 125);
+  background-color: black;
+  opacity: 1;
   top: 0;
   z-index: 100;
 }
 
 #description, #skills, #experience, #portfolio, #contact{
-  padding-top: 8%;
+  /* padding-top: 8%; */
 }
 </style>

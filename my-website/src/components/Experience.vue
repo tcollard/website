@@ -68,7 +68,7 @@ export default ({
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 15%;
+    padding: 15%;
 }
 
 .timeLine {

@@ -23,7 +23,7 @@ export default {
 .description {
     display: flex;
     flex-direction: column;
-    margin: 15%;
+    padding: 15%;
 }
 
 .title {

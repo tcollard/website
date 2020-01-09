@@ -1,51 +1,61 @@
 <template>
     <div class="nav-bar">
         <span class="ref">CV</span>
-        <a v-scroll-to="'#description'">HOME</a>
-        <a v-scroll-to="'#skills'">SKILLS</a>
-        <a v-scroll-to="'#experience'">EXPERIENCE</a>
-        <a v-scroll-to="'#portfolio'">PORTFOLIO</a>
-        <a v-scroll-to="'#contact'">CONTACT</a>
+        <a href="#description" id="descriptionNav">HOME</a>
+        <a href="#skills" id="skillsNav">SKILLS</a>
+        <a href="#portfolio" id="portfolioNav">PORTFOLIO</a>
+        <a href="#experience" id="experienceNav">EXPERIENCE</a>
+        <a href="#contact" id="contactNav">CONTACT</a>
     </div>
 </template>
 
 <script lang="ts">
     export default {
         name: 'NavBar',
+        props: {
+            visibleId: {
+                type: String,
+                required: false,
+            },
+            allEl: {
+                type: Array,
+                required: true,
+            }
+        },
         data() {
             return {
                 selectedElem: null,
             };
         },
-        
-        // methods: {
-        //     changeColor(id) {
-        //         console.log('YOYO: ', id) /* eslint-disable-line */
-        //         console.log('YOYO 1: ', this.selectedElem) /* eslint-disable-line */
-        //         let el = document.getElementById(id);
-        //         el.classList.add('select');
-                
-        //         if (this.selectedElem) {
-        //             console.log('YOYO 2: ', this.selectedElem.classList) /* eslint-disable-line */
-
-        //             // this.selectedElem.classList.remove('select');
-        //         }
-        //         this.selectedElem = el;
-        //     }
-        // },
+        created() {
+            document.addEventListener('scroll', this.isInView);
+        },
+        destroyed() {
+            document.removeEventListener('scroll', this.isInView);
+        },
+        methods: {
+            isInView() {
+                let elToChannge = document.getElementById(this.visibleId + 'Nav');
+                for (let index = 0; index < this.allEl.length; index++) {
+                    let el = document.getElementById(this.allEl[index] + 'Nav');
+                    if (el.classList.contains('changeColor')) {
+                        el.classList.remove('changeColor');
+                    }
+                }
+                elToChannge.classList.add('changeColor');
+            }
+        }
     }
 </script>
 
 <style scoped>
     .nav-bar {
-        /* background: linear-gradient(-90deg, #84CF6A, #16C0B0); */
         height: 60px;
         margin-bottom: 15px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        color: orange;
         font-size: 18px;
     }
 
@@ -56,5 +66,24 @@
     a {
         cursor: pointer;
         color: orange;
+        text-decoration-line: none;
+    }
+
+    .changeColor {
+        animation-name: newColor;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        color: white !important;
+    }
+
+    @keyframes newColor {
+        from {
+            color: orange;
+        }
+        to {
+            color: white;
+        }
+        
     }
 </style>
