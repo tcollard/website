@@ -19,7 +19,7 @@ JS/nodeJS => 85%
 
 
 Step 3:
-Portfolio (project 3 type -> link)
+Portfolio (project 3 type -> link) ===> think about it
 
 Step 4:
 Experience
@@ -42,5 +42,5 @@ Contact -> linkedIn / Github / Mail
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             TRANSITION
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-1/ - Start trasition when all elem is visible
-2/ - Keep header all long way and change color on clic (orange)
+1/ - TimeLine transition wait until first end
+2/ - Header change color on clic (orange)

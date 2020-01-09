@@ -85,6 +85,9 @@ body {
   background-color: rgb(80, 90, 125);
   top: 0;
   z-index: 100;
-  /* display: flex; */
+}
+
+#description, #skills, #experience, #portfolio, #contact{
+  padding-top: 8%;
 }
 </style>

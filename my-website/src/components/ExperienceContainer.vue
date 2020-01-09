@@ -64,7 +64,7 @@ export default {
             }
 
             if (!this.state && elDot.offsetTop > viewport.top && elDot.offsetTop < viewport.bottom
-                    && elDot.offsetTop - viewport.top < window.innerHeight / 1.5) {
+                    && elDot.offsetTop - viewport.top < window.innerHeight / 1.4) {
                 
                 elDot.classList.add('transitionDot');
                 elLine.classList.add('transitionLine');
