@@ -65,9 +65,16 @@ export default {
 
             if (!this.state && elDot.offsetTop > viewport.top && elDot.offsetTop < viewport.bottom
                     && elDot.offsetTop - viewport.top < window.innerHeight / 1.5) {
-                this.state = !this.state;
+                
                 elDot.classList.add('transitionDot');
                 elLine.classList.add('transitionLine');
+                // if (this.index != 0) {
+                //     if (document.getElementById(this.index - 1))
+                // }
+                // elDot.classList.add('start');
+                // elLine.classList.add('start');
+                    // console.log('YOYO: ', elDot.style) /* eslint-disable-line */
+                this.state = !this.state;
                 return true;
             }
             return false;
@@ -117,6 +124,14 @@ export default {
 .dot {
     border-radius: 50%;
     background-color: orange;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.start {
+    animation-play-state: running;
 }
 
 .transitionDot {

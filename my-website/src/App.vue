@@ -34,7 +34,9 @@ export default {
 
 <style>
 #app {
-  /* font-family: 'Avenir', Helvetica, Arial, sans-serif; */
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
   /* text-align: center; */
@@ -77,4 +79,12 @@ body {
   transform: rotate(360deg);
 }
 
+#navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(80, 90, 125);
+  top: 0;
+  z-index: 100;
+  /* display: flex; */
+}
 </style>
