@@ -3,12 +3,12 @@
         <span class='title text'>
             {{skill.name}}
         </span>
-        <div class="bar" v-bind:id="skill.name + '-bar'">
-            <div class="barBackground">
-                <div v-bind:id="skill.name + '-content'" class="coloredBar" v-on:scroll="isInView"></div>
+        <div class="bar" :id="skill.name + '-bar'">
+            <div class="barBackground" :id="skill.name + '-back'">
+                <div :id="skill.name + '-content'" class="coloredBar"></div>
             </div>
         </div>
-        <span class="rate text">{{skill.rate}} %</span>
+        <span class="rate text">{{ percent }} %</span>
     </div>
 </template>
 
@@ -24,6 +24,12 @@ export default {
     data() {
         return {
             state: false,
+            percentage: 0,
+        }
+    },
+    computed: {
+        percent() {
+            return this.percentage;
         }
     },
     created() {
@@ -35,6 +41,7 @@ export default {
     methods: {
         isInView() {
             let elBar = document.getElementById(this.skill.name + '-bar');
+            let elBack = document.getElementById(this.skill.name + '-back');
             let elContent = document.getElementById(this.skill.name + '-content');
             const scroll = window.scrollY || window.pageYOffset
             const viewport = {
@@ -46,7 +53,18 @@ export default {
                 && elBar.offsetTop - viewport.top < window.innerHeight / 1.08) {
                 this.state = !this.state;
                 elContent.style.width = this.skill.rate + '%';
+                elBack.style.width = '100%';
                 elContent.classList.add('barTransition');
+                elBack.classList.add('backTransition');
+                let interval = setInterval(() => {
+                    this.el = document.getElementById(this.skill.name + '-content');
+                    if (this.percentage < this.skill.rate) {
+                        this.percentage += 1;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 20);
+
                 return true;
             }
             return false;
@@ -72,7 +90,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-left: 5%;
     width: 50%;
 }
@@ -83,16 +100,52 @@ export default {
 
 .barTransition {
     animation-duration: 2s;
+    animation-delay: .2s;
     animation-name: loadBar;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color: orange;
+}
+
+.backTransition {
+    animation-duration: 1s;
+    animation-name: loadBack;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-self: left;
+}
+
+.rateTransition {
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-name: loadRate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 @keyframes loadBar {
     from {
         opacity: 0;
         width: 0px;
+    }
+    to {
+        background-color: orange;
+    }
+}
+
+@keyframes loadBack {
+    from {
+        opacity: 0;
+        width: 0px;
+    }
+}
+
+@keyframes loadRate {
+    from {
+        content: "0%";
+    }
+    to {
+        content: "100%";
     }
 }
 
@@ -103,7 +156,6 @@ export default {
 }
 
 .barBackground {
-    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
 }
 </style>
