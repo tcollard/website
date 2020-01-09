@@ -3,12 +3,16 @@
         <div class="leftSide">
             <ExperienceDetail  v-if="index % 2 === 0" :experience="experience" :index="index"></experienceDetail>
         </div>
-        <div v-if="index != length" class="line"  v-bind:id="index + '-line'">
+        <div class="middle">
+            <div class="dot" :id="index + '-dot'"></div>
+            <div v-if="index != length" class="line" :id="index + '-line'"></div>
+        </div>
+        <!-- <div v-if="index != length" class="line"  v-bind:id="index + '-line'">
             <div class="dot" v-bind:id="index + '-dot'"></div>
         </div>
         <div v-else class="endLine">
             <div class="dot" v-bind:id="index + '-dot'"></div>
-        </div>
+        </div> -->
         <div class="rightSide">
             <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
         </div>
@@ -52,6 +56,7 @@ export default {
     methods: {
         isInView() {
             let elDot = document.getElementById(this.index + '-dot');
+            let elLine = document.getElementById(this.index + '-line');
             const scroll = window.scrollY || window.pageYOffset
             const viewport = {
                 top: scroll,
@@ -63,6 +68,7 @@ export default {
                 // elDot.style.opacity = 1;
                 // elDot.style.visibility = 'hidden';
                 elDot.classList.add('transitionDot');
+                elLine.classList.add('transitionLine');
                 return true;
             }
             return false;
@@ -83,15 +89,24 @@ export default {
 
 .line {
     width: 2px;
-    background-color: orange;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: orange;
 }
 
 .endLine {
+    width: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.middle {
     width: 2px;
     display: flex;
     flex-direction: column;
@@ -109,15 +124,16 @@ export default {
     animation-name: dotTransition;
     animation-duration: .3s;
     animation-timing-function: ease-in;
-    animation-delay: .3s;
+    animation-delay: .6s;
     animation-fill-mode: forwards;
 }
 
 .transitionLine {
     animation-name: lineTransition;
     animation-duration: .8s;
-    animation-timing-function: ease-in;
-    animation-delay: 0
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes dotTransition {
@@ -133,7 +149,10 @@ export default {
 
 @keyframes lineTransition {
     from {
-        opacity: 0;
+        height: 0px;
+    }
+    to {
+        height: 100%;
     }
 }
 </style>
