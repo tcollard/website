@@ -40,7 +40,8 @@ export default {
                 bottom: scroll + window.innerHeight,
             }
 
-            if (!this.state && elBar.offsetTop > viewport.top && elBar.offsetTop < viewport.bottom) {
+            if (!this.state && elBar.offsetTop > viewport.top && elBar.offsetTop < viewport.bottom
+                && elBar.offsetTop - viewport.top < window.innerHeight / 1.08) {
                 this.state = !this.state;
                 elContent.style.width = this.skill.rate + '%';
                 elContent.classList.add('barTransition');

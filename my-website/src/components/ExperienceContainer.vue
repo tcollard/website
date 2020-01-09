@@ -63,10 +63,9 @@ export default {
                 bottom: scroll + window.innerHeight,
             }
 
-            if (!this.state && elDot.offsetTop > viewport.top && elDot.offsetTop < viewport.bottom) {
+            if (!this.state && elDot.offsetTop > viewport.top && elDot.offsetTop < viewport.bottom
+                    && elDot.offsetTop - viewport.top < window.innerHeight / 1.5) {
                 this.state = !this.state;
-                // elDot.style.opacity = 1;
-                // elDot.style.visibility = 'hidden';
                 elDot.classList.add('transitionDot');
                 elLine.classList.add('transitionLine');
                 return true;

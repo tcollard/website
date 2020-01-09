@@ -40,7 +40,8 @@ export default {
                 bottom: scroll + window.innerHeight,
             }
 
-            if (!this.state && el.offsetTop > viewport.top && el.offsetTop < viewport.bottom) {
+            if (!this.state && el.offsetTop > viewport.top && el.offsetTop < viewport.bottom
+                    && el.offsetTop - viewport.top < window.innerHeight / 1.5) {
                 this.state = !this.state;
                 // console.log('YOYO') /* eslint-disable-line */
                 el.style.opacity = 1;
