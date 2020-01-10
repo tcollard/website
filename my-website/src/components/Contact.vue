@@ -5,7 +5,7 @@
             <a  href="https://www.linkedin.com/in/thibault-collard-b8228168/" target="_blank">
                 <img class="img" src="../assets/linkedIn.svg" alt="linkedIn">
             </a>
-            <span class="text mail">thibaul.collard1@gmail.com</span>
+            <span class="text mail">thibault.collard1@gmail.com</span>
             <a  href="https://github.com/tcollard" target="_blank">
                 <img class="img" src="../assets/github.svg" alt="linkedIn">
             </a>
@@ -27,7 +27,7 @@ export default {
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 15%;
+        padding: 8% 20% 8% 20%;
     }
 
     .contactContainer {

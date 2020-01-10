@@ -30,14 +30,9 @@ Experience
     POSTE
     Description tranquil
 
-5/ = Step 5:
+Step 5:
 Contact -> linkedIn / Github / Mail
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            TRY IT
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-6/ = Github page on tcollard.github.io
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             TRANSITION
@@ -45,6 +40,4 @@ Contact -> linkedIn / Github / Mail
 
 ToDO:
 
-1/ Change padding / margin Description/Skills ...
 2/ Content A propos
-3/ Change size for phone responsive
