@@ -5,7 +5,7 @@
             <a  href="https://www.linkedin.com/in/thibault-collard-b8228168/" target="_blank">
                 <img class="img" src="../assets/linkedIn.svg" alt="linkedIn">
             </a>
-            <span class="text">thibaul.collard1@gmail.com</span>
+            <span class="text mail">thibaul.collard1@gmail.com</span>
             <a  href="https://github.com/tcollard" target="_blank">
                 <img class="img" src="../assets/github.svg" alt="linkedIn">
             </a>
@@ -38,8 +38,12 @@ export default {
         align-items: center;
     }
 
+    .mail {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     .img {
-        width: 80px;
+        width: 5em;
         cursor: pointer;
     }
 

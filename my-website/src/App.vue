@@ -68,7 +68,7 @@ html{
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3.2em;
 }
 
 #app {
@@ -92,8 +92,8 @@ body {
   color:orange;
   cursor: pointer;
 	position:fixed;
-  bottom: 8%;
-  right: 7%;
+  bottom: 70px;
+  right: 65px;
 	border-color:orange;
 	text-decoration:none;
 	transition:all .3s ease-out;
@@ -128,11 +128,8 @@ body {
 
 .text {
     font-family: 'Roboto';
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
     font-weight: 300;
-}
-#description, #skills, #experience, #portfolio, #contact{
-  /* padding-top: 8%; */
 }
 </style>

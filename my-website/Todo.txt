@@ -46,5 +46,5 @@ Contact -> linkedIn / Github / Mail
 ToDO:
 
 1/ Change padding / margin Description/Skills ...
-2/ Add Contact => linkedIn / Github / Adress Mail
-3/ Content A propos
+2/ Content A propos
+3/ Change size for phone responsive
