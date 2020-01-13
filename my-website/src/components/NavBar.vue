@@ -76,6 +76,7 @@
                 let elBottom = document.getElementById('bottom');
                 let elList = document.getElementsByClassName('listItems')[0];
                 let elNav = document.getElementById('navbar');
+                let scrollPosition = window.scrollY;
                 if (this.iconPos === 'init') {
                     this.iconPos = 'cross';
                     elMiddle1.classList.add('middle1ToCross');
@@ -84,7 +85,10 @@
                     elBottom.classList.add('hideBar');
                     elList.classList.add('open');
                     elNav.classList.add('fullScreen');
+                    document.body.style.top = '-' + scrollPosition + 'px';
                     document.body.style.position = 'fixed';
+                    console.log('YO: ', scrollPosition) /* eslint-disable-line */
+
                     if (elMiddle1.classList.contains('middle1ToInit')) {
                         elMiddle1.classList.remove('middle1ToInit');
                         elMiddle2.classList.remove('middle2ToInit');
@@ -108,6 +112,7 @@
                     elNav.classList.add('initNav');
                     elList.classList.add('close');
                     document.body.style.position = '';
+                    document.body.style.top = '-' + scrollPosition + 'px';
                 }
             },
         }
@@ -188,6 +193,10 @@ a {
         height: 45px;
         position: relative;
         cursor: pointer;
+    }
+
+    .menuIcon:active {
+        -webkit-tap-highlight-color: transparent;
     }
 
     .bar {
@@ -321,6 +330,7 @@ a {
     .menuTitle {
         font-size: 1em;
         font-weight: bold;
+        margin-bottom: 5%;
     }
 
     .fullScreen {
