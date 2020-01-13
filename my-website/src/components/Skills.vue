@@ -1,6 +1,6 @@
 <template>
     <div class="skills">
-        <h1>Skills</h1>
+        <h1>Compétences</h1>
         <div class="listSkills">
             <div v-for="skill in skills" :key="skill" class="oneSkill">
                 <ProgressBar :skill="skill"></ProgressBar>

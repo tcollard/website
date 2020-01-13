@@ -1,6 +1,6 @@
 <template>
     <div class="experience">
-        <h1>Experience</h1>
+        <h1>Expérience</h1>
         <div class="timeLine" v-for="(experience, index) in experiences" :key="index">
             <ExperienceContainer :index="index" :experience="experience" :length="experiences.length - 1"></ExperienceContainer>
         </div>

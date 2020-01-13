@@ -2,11 +2,11 @@
     <div>
         <div class="nav-bar-web">
             <span class="ref">CV</span>
-            <a class="ref" href="#description" id="descriptionNav">HOME</a>
-            <a class="ref" href="#skills" id="skillsNav">SKILLS</a>
-            <a class="ref" href="#portfolio" id="portfolioNav">PORTFOLIO</a>
-            <a class="ref" href="#experience" id="experienceNav">EXPERIENCE</a>
-            <a class="ref" href="#contact" id="contactNav">CONTACT</a>
+            <a class="ref" href="#description" id="descriptionNav">À propos</a>
+            <a class="ref" href="#skills" id="skillsNav">Compétences</a>
+            <a class="ref" href="#portfolio" id="portfolioNav">Portfolio</a>
+            <a class="ref" href="#experience" id="experienceNav">Expérience</a>
+            <a class="ref" href="#contact" id="contactNav">Contact</a>
         </div>
         <div class="nav-bar-phone">
             <div class="menuIcon" @click="changeIcon">
@@ -16,13 +16,13 @@
                 <div id="bottom" class="bar"></div>
             </div>
         </div>
-        <div class="listItems">
-            <span class="menuTitle" @click="changeIcon">CV</span>
-            <a class="menuTitle" @click="changeIcon" href="#description" id="descriptionPhone">HOME</a>
-            <a class="menuTitle" @click="changeIcon" href="#skills" id="skillsPhone">SKILLS</a>
-            <a class="menuTitle" @click="changeIcon" href="#portfolio" id="portfolioPhone">PORTFOLIO</a>
-            <a class="menuTitle" @click="changeIcon" href="#experience" id="experiencePhone">EXPERIENCE</a>
-            <a class="menuTitle" @click="changeIcon" href="#contact" id="contactPhone">CONTACT</a>
+        <div class="listItems" @click="changeIcon">
+            <a class="menuTitle" href="#description" id="descriptionPhone">À propos</a>
+            <a class="menuTitle" href="#skills" id="skillsPhone">Compétences</a>
+            <a class="menuTitle" href="#portfolio" id="portfolioPhone">Portfolio</a>
+            <a class="menuTitle" href="#experience" id="experiencePhone">Expérience</a>
+            <a class="menuTitle" href="#contact" id="contactPhone">Contact</a>
+            <span class="menuTitle" >CV</span>
         </div>
     </div>
 </template>
@@ -85,7 +85,7 @@
                     elBottom.classList.add('hideBar');
                     elList.classList.add('open');
                     elNav.classList.add('fullScreen');
-                    document.body.style.top = '-' + scrollPosition + 'px';
+                    document.body.style.top = '3536px';
                     document.body.style.position = 'fixed';
                     console.log('YO: ', scrollPosition) /* eslint-disable-line */
 
@@ -112,7 +112,7 @@
                     elNav.classList.add('initNav');
                     elList.classList.add('close');
                     document.body.style.position = '';
-                    document.body.style.top = '-' + scrollPosition + 'px';
+                    // document.body.style.top = '3536px';
                 }
             },
         }
