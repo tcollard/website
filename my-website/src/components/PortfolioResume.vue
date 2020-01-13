@@ -63,7 +63,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8% 20% 8% 20%;
+    padding: 8% 10% 8% 10%;
 }
 
 /* .carousel {

@@ -107,8 +107,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 

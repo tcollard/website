@@ -264,6 +264,7 @@ a {
 
     .open {
         display: flex;
+        height: 100%;
     }
 
     .close {
@@ -381,7 +382,7 @@ a {
 
     .menuTitle {
         font-size: 1em;
-        font-weight: bold;
+        font-weight: 400;
         margin-bottom: 5%;
     }
 

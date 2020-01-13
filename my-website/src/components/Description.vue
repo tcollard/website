@@ -24,7 +24,7 @@ export default {
 .description {
     display: flex;
     flex-direction: column;
-    padding: 8% 20% 8% 20%;
+    padding: 8% 10% 8% 10%;
 }
 
 .title {
