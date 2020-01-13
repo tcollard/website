@@ -7,12 +7,6 @@
             <div class="dot" :id="index + '-dot'"></div>
             <div v-if="index != length" class="line" :id="index + '-line'"></div>
         </div>
-        <!-- <div v-if="index != length" class="line"  v-bind:id="index + '-line'">
-            <div class="dot" v-bind:id="index + '-dot'"></div>
-        </div>
-        <div v-else class="endLine">
-            <div class="dot" v-bind:id="index + '-dot'"></div>
-        </div> -->
         <div class="rightSide">
             <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
         </div>
@@ -68,12 +62,6 @@ export default {
                 
                 elDot.classList.add('transitionDot');
                 elLine.classList.add('transitionLine');
-                // if (this.index != 0) {
-                //     if (document.getElementById(this.index - 1))
-                // }
-                // elDot.classList.add('start');
-                // elLine.classList.add('start');
-                    // console.log('YOYO: ', elDot.style) /* eslint-disable-line */
                 this.state = !this.state;
                 return true;
             }
@@ -85,7 +73,7 @@ export default {
 
 <style scoped>
 .leftSide, .rightSide {
-    width: 49%;
+    min-width: 49%;
 }
 
 .time {
@@ -112,13 +100,27 @@ export default {
     margin-right: 5%;
 }
 
-.middle {
-    width: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+@media only screen and (min-width: 480px) {
+
+    .middle {
+        width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .middle {
+        width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
 
 .dot {

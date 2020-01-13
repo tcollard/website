@@ -129,4 +129,11 @@ export default {
         visibility: visible;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .text {
+        hyphens: auto;
+    }
+}
+
 </style>
