@@ -1,6 +1,6 @@
 <template>
     <div class="skills">
-        <h1>Compétences</h1>
+        <h1 class="title">Compétences</h1>
         <div class="listSkills">
             <div v-for="skill in skills" :key="skill" class="oneSkill">
                 <ProgressBar :skill="skill"></ProgressBar>
@@ -75,5 +75,9 @@ export default {
     width: 100%;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+
+.title {
+    align-self: center;
 }
 </style>
