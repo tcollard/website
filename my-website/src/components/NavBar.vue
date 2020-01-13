@@ -25,7 +25,7 @@
             <a class="menuTitle" @click="downloadCV">CV</a>
         </div>
         <div v-if="this.downloading" class="download">
-            <span class="question">Voulez-vous télécharger<br>ce magnifique CV ?</span>
+            <h1 class="question">Voulez-vous télécharger<br>ce magnifique CV ?</h1>
             <div class="answer">
                 <a class="answerText" @click="downloadCV" href="https://github.com/tcollard/CV/raw/master/THIBAULT%20COLLARD.pdf" download>Oui</a>
                 <div class="answerText" @click="downloadCV">Non</div>
@@ -202,10 +202,8 @@ a {
 }
 
 .question {
-    font-family: 'Roboto';
     font-size: 1em;
     line-height: auto;
-    font-weight: 300;
     margin-bottom: 10%;
     text-align: center;
 }
