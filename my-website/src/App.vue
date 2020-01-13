@@ -61,14 +61,15 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto:300');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,bold');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,bold,400');
 html{
   scroll-behavior: smooth;
 }
 
 h1 {
   font-size: 3.2em;
+  font-weight: 400;
 }
 
 #app {

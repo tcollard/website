@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="nav-bar-web">
-            <span class="ref">CV</span>
+            <a class="ref" @click="downloadCV">CV</a>
             <a class="ref" href="#description" id="descriptionNav">À propos</a>
             <a class="ref" href="#skills" id="skillsNav">Compétences</a>
             <a class="ref" href="#portfolio" id="portfolioNav">Portfolio</a>
@@ -22,7 +22,14 @@
             <a class="menuTitle" href="#portfolio" id="portfolioPhone">Portfolio</a>
             <a class="menuTitle" href="#experience" id="experiencePhone">Expérience</a>
             <a class="menuTitle" href="#contact" id="contactPhone">Contact</a>
-            <span class="menuTitle" >CV</span>
+            <a class="menuTitle" @click="downloadCV">CV</a>
+        </div>
+        <div v-if="this.downloading" class="download">
+            <span class="question">Voulez-vous télécharger<br>ce magnifique CV ?</span>
+            <div class="answer">
+                <a class="answerText" @click="downloadCV" href="https://github.com/tcollard/CV/raw/master/THIBAULT%20COLLARD.pdf" download>Oui</a>
+                <div class="answerText" @click="downloadCV">Non</div>
+            </div>
         </div>
     </div>
 </template>
@@ -43,6 +50,7 @@
         data() {
             return {
                 iconPos: 'init',
+                downloading: false,
             };
         },
         created() {
@@ -115,6 +123,9 @@
                     window.onscroll = () => {};
                 }
             },
+            downloadCV() {
+                this.downloading = !this.downloading;
+            }
         }
     }
 </script>
@@ -154,6 +165,49 @@ a {
     to {
         color: white;
     }
+}
+
+.download {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.answerText {
+    font-family: 'Roboto Slab';
+    font-size: 0.6em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10%;
+    padding: 1%;
+    background-color: orange;
+    margin: 2%;
+    min-width: 8%;
+    cursor: pointer;
+    color: white;
+}
+
+.question {
+    font-family: 'Roboto';
+    font-size: 1em;
+    line-height: auto;
+    font-weight: 300;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 @media only screen and (min-width: 480px) {
@@ -335,7 +389,6 @@ a {
 
     .fullScreen {
         height: 100%;
-        /* scroll-behavior: unset; */
     }
 
     .initNav {
