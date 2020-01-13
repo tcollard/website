@@ -17,12 +17,12 @@
             </div>
         </div>
         <div class="listItems">
-            <span class="ref" @click="changeIcon">CV</span>
-            <a class="ref" @click="changeIcon" href="#description" id="descriptionPhone">HOME</a>
-            <a class="ref" @click="changeIcon" href="#skills" id="skillsPhone">SKILLS</a>
-            <a class="ref" @click="changeIcon" href="#portfolio" id="portfolioPhone">PORTFOLIO</a>
-            <a class="ref" @click="changeIcon" href="#experience" id="experiencePhone">EXPERIENCE</a>
-            <a class="ref" @click="changeIcon" href="#contact" id="contactPhone">CONTACT</a>
+            <span class="menuTitle" @click="changeIcon">CV</span>
+            <a class="menuTitle" @click="changeIcon" href="#description" id="descriptionPhone">HOME</a>
+            <a class="menuTitle" @click="changeIcon" href="#skills" id="skillsPhone">SKILLS</a>
+            <a class="menuTitle" @click="changeIcon" href="#portfolio" id="portfolioPhone">PORTFOLIO</a>
+            <a class="menuTitle" @click="changeIcon" href="#experience" id="experiencePhone">EXPERIENCE</a>
+            <a class="menuTitle" @click="changeIcon" href="#contact" id="contactPhone">CONTACT</a>
         </div>
     </div>
 </template>
@@ -75,6 +75,7 @@
                 let elMiddle2 = document.getElementById('middle2');
                 let elBottom = document.getElementById('bottom');
                 let elList = document.getElementsByClassName('listItems')[0];
+                let elNav = document.getElementById('navbar');
                 if (this.iconPos === 'init') {
                     this.iconPos = 'cross';
                     elMiddle1.classList.add('middle1ToCross');
@@ -82,12 +83,15 @@
                     elTop.classList.add('hideBar');
                     elBottom.classList.add('hideBar');
                     elList.classList.add('open');
+                    elNav.classList.add('fullScreen');
+                    document.body.style.position = 'fixed';
                     if (elMiddle1.classList.contains('middle1ToInit')) {
                         elMiddle1.classList.remove('middle1ToInit');
                         elMiddle2.classList.remove('middle2ToInit');
                         elTop.classList.remove('showBar');
                         elBottom.classList.remove('showBar');
                         elList.classList.remove('close');
+                        elNav.classList.remove('initNav');
                     }
                 } else {
                     this.iconPos = 'init';
@@ -95,12 +99,15 @@
                     elMiddle2.classList.remove('middle2ToCross');
                     elTop.classList.remove('showBar');
                     elBottom.classList.remove('showBar');
+                    elNav.classList.remove('fullScreen');
                     elList.classList.remove('open');
                     elMiddle1.classList.add('middle1ToInit');
                     elMiddle2.classList.add('middle2ToInit');
                     elTop.classList.add('showBar');
                     elBottom.classList.add('showBar');
+                    elNav.classList.add('initNav');
                     elList.classList.add('close');
+                    document.body.style.position = '';
                 }
             },
         }
@@ -309,6 +316,20 @@ a {
         to {
             opacity: 1;
         }
+    }
+
+    .menuTitle {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .fullScreen {
+        height: 100%;
+        /* scroll-behavior: unset; */
+    }
+
+    .initNav {
+        height: 60px;
     }
 
 }
