@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a v-scroll-to="'#navbar'" class="floatingBtn"></a>
+    <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
     <NavBar id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
     <JobTitle id="jobTitle"></JobTitle>
     <Description id="description"></Description>
@@ -51,6 +51,18 @@ export default {
             bottom: scroll + window.innerHeight,
         }
       let elJobTitle = document.getElementById('jobTitle');
+      let elContact = document.getElementById('contact');
+      let elScroll = document.getElementById('scrollBtn');
+
+      // console.log('Scroll: ', elScroll); /*eslint-disable-line*/
+      // console.log('Contact: ', elContact.offsetTop); /*eslint-disable-line*/
+      // console.log('Viewport: ', viewport); /*eslint-disable-line*/
+      if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
+        elScroll.classList.add('darkColorBtn');
+      } else if (elScroll.classList.contains('darkColorBtn')) {
+        elScroll.classList.remove('darkColorBtn');
+      }
+
       if (scroll >= 100) {
         elJobTitle.style.opacity = 0.1;
         document.getElementsByClassName('post')[0].style.display = 'none';
@@ -122,7 +134,7 @@ body {
   content:'▲';
   text-align: center;
 	font-size:1.9em;
-	position: inherit;;
+	position: inherit;
 	border:solid 3px orange;
 	border-radius:10em;
 	width:1.5em;
@@ -134,6 +146,12 @@ body {
 
 .floatingBtn:hover:before{
   transform: rotate(360deg);
+}
+
+.darkColorBtn {
+  color: #39394C;
+  border-color: #39394C;
+
 }
 
 #navbar {

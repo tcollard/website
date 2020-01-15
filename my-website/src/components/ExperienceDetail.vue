@@ -116,7 +116,6 @@ export default {
         opacity: 0;
     }
     to {
-        /* visibility: visible; */
         opacity: 1;
     }
 }

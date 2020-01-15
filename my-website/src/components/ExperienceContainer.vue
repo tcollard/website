@@ -120,7 +120,7 @@ export default {
 }
 
 /* Web */
-@media only screen and (min-width: 480px) {
+/* @media only screen and (min-width: 480px) { */
 
     .middleContainer {
         width: 8%;
@@ -135,19 +135,24 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-}
+/* } */
 
 /* Phone */
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
+    .middleContainer {
+        width: 8%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .middle {
         width: 2px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 10%;
-        margin-right: 10%;
     }
-}
+} */
 
 .dot {
     border-radius: 50%;

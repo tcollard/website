@@ -19,7 +19,7 @@ export default {
             projects: [
                 {
                     title: '42SH',
-                    img: require('../assets/term.gif'),
+                    img: require('../assets/terminal.png'),
                     description: '<p class="text">Réalisation d\'un interpréteur de commande UNIX tel bash</p>',
                     link: 'https://github.com/tcollard/42sh',
                 },
@@ -62,25 +62,12 @@ export default {
     grid-template-columns: 50% 50%; 
     justify-items: center;
     grid-gap: 10% 10%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    align-items: center; */
 }
 
 .project {
     width: 100%;
     text-align: center;
     padding: 2%;
-    /* width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2%;
-    border-radius: 10px;
-    background-color: rgb(51, 59, 80); */
 }
 
 .title {

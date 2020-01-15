@@ -22,19 +22,13 @@ export default {
 
 .name {
     font-family: 'Roboto Slab';
-    font-size: 5em;
+    font-size: 4.5em;
     font-weight: bold;
     color: white;
-    /* background: linear-gradient(white 0%, transparent 100%); */
-	/* -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; */
     z-index: -1;
 }
 
 .post {
-    /* font-family: 'Roboto Slab';
-    font-size: 3em;
-    font-weight: bold; */
     color: orange;
 }
 
