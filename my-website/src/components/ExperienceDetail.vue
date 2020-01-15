@@ -45,11 +45,7 @@ export default {
                 this.state = !this.state;
                 // console.log('YOYO') /* eslint-disable-line */
                 el.style.opacity = 1;
-                if (this.index % 2) { 
-                    el.classList.add('transitionLeft')
-                } else {
-                    el.classList.add('transitionRight');
-                }
+                el.classList.add('transitionOpacity')
                 return true;
             }
             return false;
@@ -96,32 +92,15 @@ export default {
     text-align: left;
 }
 
-.transitionLeft {
-    animation-name: slideLeft;
+.transitionOpacity {
+    animation-name: opacityAnimation;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-delay: .4s;
     animation-fill-mode: forwards;
 }
 
-.transitionRight {
-    animation-name: slideRight;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-delay: .4s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideLeft {
-    from {
-        opacity: 0;
-    }
-    to {
-        visibility: visible;
-    }
-}
-
-@keyframes slideRight {
+@keyframes opacityAnimation {
     from {
         opacity: 0;
     }
