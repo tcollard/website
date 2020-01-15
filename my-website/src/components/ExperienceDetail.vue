@@ -1,9 +1,12 @@
 <template>
-    <div v-bind:id="experience.date" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
-        <span class="date">{{experience.date}}</span>
-        <span class="company">{{experience.company}}</span>
-        <span class="job">{{experience.job}}</span>
-        <span class="text">{{experience.description}}</span>
+    <div v-bind:id="experience.date + id" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
+        <span v-if="index % 2 === 0 && id === 'right'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{experience.date}}</span>
+        <span v-if="index % 2 === 1 && id === 'left'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{experience.date}}</span>
+        <div  class="containerDetail" v-if="index % 2 === 0 && id === 'left' || index % 2 === 1 && id === 'right'">
+            <span class="company">{{experience.company}}</span>
+            <span class="job">{{experience.job}}</span>
+            <span class="text">{{experience.description}}</span>
+        </div>
     </div>
 </template>
 
@@ -17,6 +20,10 @@ export default {
         },
         index: {
             type: Number,
+            required: true,
+        },
+        id: {
+            type: String,
             required: true,
         }
     },
@@ -33,7 +40,7 @@ export default {
     },
     methods: {
         isInView() {
-            let el = document.getElementById(this.experience.date);
+            let el = document.getElementById(this.experience.date + this.id);
             const scroll = window.scrollY || window.pageYOffset
             const viewport = {
                 top: scroll,
@@ -43,9 +50,7 @@ export default {
             if (!this.state && el.offsetTop > viewport.top && el.offsetTop < viewport.bottom
                     && el.offsetTop - viewport.top < window.innerHeight / 1.4) {
                 this.state = !this.state;
-                // console.log('YOYO') /* eslint-disable-line */
-                el.style.opacity = 1;
-                el.classList.add('transitionOpacity')
+                el.classList.add('transitionOpacity');
                 return true;
             }
             return false;
@@ -56,32 +61,38 @@ export default {
 </script>
 
 <style scoped>
+
+.date {
+    font-family: 'Roboto';
+    color: orange;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.containerDetail {
+    display: flex;
+    flex-direction: column;
+}
+
 .detail {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
-    visibility: hidden;
-}
-
-.date {
-    color: orange;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding-bottom: 2%;
+    opacity: 0;
+    margin-bottom: 50px;
 }
 
 .company {
     font-size: 1.4em;
-    font-weight: bold;
-    padding-bottom: 2%;
-    margin-bottom: 5%;
+    font-weight: 400;
+    line-height: 0.9em;
 }
 
 .job {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-bottom: 2%;
+    font-size: 2em;
+    font-weight: 400;
+    padding-bottom: 5%;
 }
 
 .leftPosition {
@@ -105,7 +116,8 @@ export default {
         opacity: 0;
     }
     to {
-        visibility: visible;
+        /* visibility: visible; */
+        opacity: 1;
     }
 }
 

@@ -1,14 +1,16 @@
 <template>
     <div class="time" v-on:scroll="create(index)">
         <div class="leftSide">
-            <ExperienceDetail  v-if="index % 2 === 0" :experience="experience" :index="index"></experienceDetail>
+            <ExperienceDetail :experience="experience" :index="index" :id="'left'"></experienceDetail>
         </div>
-        <div class="middle">
-            <div class="dot" :id="index + '-dot'"></div>
-            <div v-if="index != length" class="line" :id="index + '-line'"></div>
+        <div class="middleContainer">
+            <div class="middle">
+                <div class="dot" :id="index + '-dot'"></div>
+                <div v-if="index != length" class="line" :id="index + '-line'"></div>
+            </div>
         </div>
         <div class="rightSide">
-            <ExperienceDetail  v-if="index % 2 === 1" :experience="experience"></experienceDetail>
+            <ExperienceDetail :experience="experience" :index="index" :id="'right'"></experienceDetail>
         </div>
     </div>
 </template>
@@ -73,7 +75,8 @@ export default {
 
 <style scoped>
 .leftSide, .rightSide {
-    min-width: 49%;
+    width: 46%;
+    display: flex;
 }
 
 .time {
@@ -100,18 +103,41 @@ export default {
     margin-right: 5%;
 }
 
+.date {
+    font-family: 'Roboto';
+    color: orange;
+    font-weight: 400;
+    font-size: 1.2em;
+    padding-bottom: 2%;
+}
+
+.left {
+    text-align: right;
+}
+
+.right {
+    text-align: left;
+}
+
+/* Web */
 @media only screen and (min-width: 480px) {
+
+    .middleContainer {
+        width: 8%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
     .middle {
         width: 2px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 2%;
-        margin-right: 2%;
     }
 }
 
+/* Phone */
 @media only screen and (max-width: 480px) {
     .middle {
         width: 2px;

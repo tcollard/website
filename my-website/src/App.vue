@@ -83,6 +83,7 @@ html{
 h1 {
   font-size: 3.2em;
   font-weight: 400;
+  margin-bottom: 10%;
 }
 
 #app {
@@ -146,7 +147,7 @@ body {
 
 .text {
     font-family: 'Roboto';
-    font-size: 1em;
+    font-size: 14px;
     line-height: 24px;
     font-weight: 300;
 }
