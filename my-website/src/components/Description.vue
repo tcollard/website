@@ -39,7 +39,7 @@ export default {
         flex-direction: column;
         padding: 8% 10% 8% 10%;
         margin-top: 125%;
-        width: 100%;
+        /* width: 100%; */
     }
 }
 .title {
