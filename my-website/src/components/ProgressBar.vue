@@ -43,7 +43,7 @@ export default {
             let elBar = document.getElementById(this.skill.name + '-bar');
             let elBack = document.getElementById(this.skill.name + '-back');
             let elContent = document.getElementById(this.skill.name + '-content');
-            const scroll = window.scrollY || window.pageYOffset
+            const scroll = window.scrollY || window.pageYOffset;
             const viewport = {
                 top: scroll,
                 bottom: scroll + window.innerHeight,

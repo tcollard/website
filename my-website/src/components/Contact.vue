@@ -29,6 +29,7 @@ export default {
         align-items: center;
         text-align: center;
         padding: 8% 10% 8% 10%;
+        margin-bottom: 5%;
     }
 
     .contactContainer {

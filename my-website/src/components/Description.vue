@@ -1,15 +1,12 @@
 <template>
     <div class="description">
         <div class="title">
-            <span class="name">THIBAULT COLLARD</span>
-            <span class="post">Dev full stack JS</span>
             <h1>À propos</h1>
         </div>
         <div class="descriptionContent text">
             <span class="text">
                 {{description}}
             </span>
-            <!-- <span>Link download CV</span> -->
         </div>
     </div>
 </template>
@@ -30,6 +27,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 8% 10% 8% 10%;
+    margin-top: 30%;
 }
 
 .title {
@@ -46,20 +44,8 @@ export default {
   align-content: center;
   padding: 2%;
   border-radius: 10px;
-  background-color: rgb(51, 59, 80);
+  /* background-color: rgb(51, 59, 80); */
   text-align: center;
 }
 
-.name {
-    font-family: 'Roboto Slab';
-    font-size: 5em;
-    font-weight: bold;
-}
-
-.post {
-    font-family: 'Roboto Slab';
-    font-size: 3em;
-    font-weight: bold;
-    color: orange;
-}
 </style>
