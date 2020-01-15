@@ -25,7 +25,8 @@ export default {
 </script>
 
 <style scoped>
-
+/* Web */
+@media only screen and (min-width: 480px) {
     .contact {
         display: flex;
         flex-direction: column;
@@ -36,7 +37,21 @@ export default {
         background-color: orange;
         /* max-width: 100%; */
     }
+}
 
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8% 10% 8% 10%;
+        background-color: orange;
+        width: 100%;
+    }
+}
     .contactContainer {
         display: flex;
         flex-direction: column;
@@ -60,6 +75,7 @@ export default {
         font-weight: 400;
         line-height: 0.9em;
         font-family: 'Roboto Slab';
+        text-align: left;
     }
 
     a {

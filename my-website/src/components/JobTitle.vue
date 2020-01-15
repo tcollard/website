@@ -12,7 +12,6 @@ export default {
 </script>
 
 <style scoped>
-
 .title {
     position: fixed;
     margin-top: 100px;

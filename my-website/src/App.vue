@@ -54,9 +54,6 @@ export default {
       let elContact = document.getElementById('contact');
       let elScroll = document.getElementById('scrollBtn');
 
-      // console.log('Scroll: ', elScroll); /*eslint-disable-line*/
-      // console.log('Contact: ', elContact.offsetTop); /*eslint-disable-line*/
-      // console.log('Viewport: ', viewport); /*eslint-disable-line*/
       if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
         elScroll.classList.add('darkColorBtn');
       } else if (elScroll.classList.contains('darkColorBtn')) {

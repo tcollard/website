@@ -23,13 +23,25 @@ export default {
 </script>
 
 <style scoped>
-.description {
-    display: flex;
-    flex-direction: column;
-    padding: 8% 10% 8% 10%;
-    margin-top: 30%;
+/* Web */
+@media only screen and (min-width: 480px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        padding: 8% 10% 8% 10%;
+        margin-top: 30%;
+    }
 }
-
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        padding: 8% 10% 8% 10%;
+        margin-top: 125%;
+        width: 100%;
+    }
+}
 .title {
     display: flex;
     flex-direction: column;

@@ -74,10 +74,6 @@ export default {
 </script>
 
 <style scoped>
-.leftSide, .rightSide {
-    width: 46%;
-    display: flex;
-}
 
 .time {
     display: flex;
@@ -120,7 +116,7 @@ export default {
 }
 
 /* Web */
-/* @media only screen and (min-width: 480px) { */
+@media only screen and (min-width: 480px) {
 
     .middleContainer {
         width: 8%;
@@ -135,12 +131,17 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-/* } */
+
+    .leftSide, .rightSide {
+        width: 46%;
+        display: flex;
+    }
+}
 
 /* Phone */
-/* @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .middleContainer {
-        width: 8%;
+        width: 12%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -152,7 +153,12 @@ export default {
         flex-direction: column;
         align-items: center;
     }
-} */
+
+    .leftSide, .rightSide {
+        width: 44%;
+        display: flex;
+    }
+}
 
 .dot {
     border-radius: 50%;

@@ -62,15 +62,29 @@ export default ({
 </script>
 
 <style scoped>
-.experience {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 8% 10% 8% 10%;
+/* Phone */
+@media only screen and (max-width: 480px) {
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8% 10% 8% 10%;
+        width: 100%;
+    }
 }
-
+/* Web */
+@media only screen and (min-width: 480px) {
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8% 10% 8% 10%;
+    }
+}
 .timeLine {
     display: flex;
     flex-direction: column;
