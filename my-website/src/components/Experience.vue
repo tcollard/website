@@ -22,7 +22,7 @@ export default ({
                     date: '2019',
                     company: 'Neocity',
                     job: 'Dev fullStack',
-                    description: 'Réalisation d\'application citadinne, cross-platform.'
+                    description: 'Réalisation d\'application citadinne cross-platform, via cordova / ionic. Utilisation d\'angular pour les applications, et nodeJS pour l\'API'
                 },
                 {
                     date: '2018',
@@ -34,19 +34,13 @@ export default ({
                     date: '2017',
                     company: '42',
                     job: 'Student',
-                    description: 'Suivi du cursus de 42, formation en programmation.'
-                },
-                {
-                    date: '2015 - 2016',
-                    company: 'WHV',
-                    job: 'Australia',
-                    description: 'Séjour linguistique en Australie : découverte du pays et expériences pro (restauration, manutention, ferme)'
+                    description: 'Suivi du cursus de 42, formation en programmation. Plusieurs projets en C de type recoder ls / printf, recréer un interpreteur de commande. Et initiation au web PHP / HTML / CSS (2 semaines de formation)',
                 },
                 {
                     date: '2013 - 2015',
                     company: 'CEPI Ingenierie',
-                    job: 'Charge de Projet / Thermicien',
-                    description: 'Réalisation d\'étude thermique (RT 2012), plan et dimensionnement Chauffage Ventilation Climatisation (logiciel Autocad)'
+                    job: 'Thermicien',
+                    description: 'Chargé de projet et de réalisation d\'étude thermique (RT 2012), plan et dimensionnement Chauffage, Ventilation, Climatisation, et isolation de bâtiments.'
                 },
                 {
                     date: '2012',
