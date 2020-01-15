@@ -52,7 +52,7 @@ export default {
         }
       let elJobTitle = document.getElementById('jobTitle');
       if (scroll >= 100) {
-        elJobTitle.style.opacity = 0.15;
+        elJobTitle.style.opacity = 0.1;
         document.getElementsByClassName('post')[0].style.display = 'none';
       } else {
         if (document.getElementsByClassName('post')[0].style.display === 'none') {
