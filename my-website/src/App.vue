@@ -99,6 +99,7 @@ h1 {
   font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: column;
+  width: 100%;
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
   /* text-align: center; */
@@ -110,6 +111,7 @@ body {
   margin: 0;
   background-color: #39394C;
   color: white;
+  width: 100%;
 }
 
 .fixe {

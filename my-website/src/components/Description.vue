@@ -16,7 +16,7 @@ export default {
     name: 'Description',
     data () {
         return {
-            description: 'Aprés avoir été formé à 42 Paris, j\'ai pu travailler dans le développement web et d\'application cross-platform.\n Je m\'interesse à différentes technologies telles que Flutter / vueJS.'
+            description: 'Aprés un parcours en ingénierie du bâtiment et des énergies, 42 m\'a offert l\'opportunité de découvrir et de me former au monde de l\'informatique.'
         }
     }
 }
@@ -39,7 +39,7 @@ export default {
         flex-direction: column;
         padding: 8% 10% 8% 10%;
         margin-top: 125%;
-        /* width: 100%; */
+        width: 100%;
     }
 }
 .title {

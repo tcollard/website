@@ -35,7 +35,6 @@ export default {
         text-align: center;
         padding: 8% 10% 8% 10%;
         background-color: orange;
-        /* max-width: 100%; */
     }
 }
 
@@ -49,7 +48,7 @@ export default {
         text-align: center;
         padding: 8% 10% 8% 10%;
         background-color: orange;
-        /* width: 100%; */
+        width: 100%;
     }
 }
     .contactContainer {

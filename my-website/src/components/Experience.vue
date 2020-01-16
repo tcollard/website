@@ -76,7 +76,7 @@ export default ({
         align-items: center;
         text-align: center;
         padding: 8% 10% 8% 10%;
-        /* width: 100%; */
+        width: 100%;
     }
 }
 .timeLine {
