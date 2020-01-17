@@ -26,7 +26,7 @@ export default {
 /* Web */
 @media only screen and (min-width: 480px) {
     .description {
-        margin-top: 30%;
+        margin-top: 300px;
     }
 }
 /* Phone */
