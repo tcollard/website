@@ -56,8 +56,13 @@ export default {
 </script>
 
 <style scoped>
-/* Web */
-@media only screen and (min-width: 480px) {
+    /* Phone */
+    @media only screen and (max-width: 480px) {
+        .skills {
+            width: 100%;
+        }
+    }
+
     .skills {
         display: flex;
         flex-direction: column;
@@ -66,35 +71,20 @@ export default {
         text-align: center;
         padding: 8% 10% 8% 10%;
     }
-}
 
-/* Phone */
-@media only screen and (max-width: 480px) {
-    .skills {
+    .listSkills {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        padding: 8% 10% 8% 10%;
+        align-items: center;
+    }
+
+    .oneSkill {
         width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
-}
 
-
-.listSkills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.oneSkill {
-    width: 100%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.title {
-    align-self: center;
-}
+    .title {
+        align-self: center;
+    }
 </style>

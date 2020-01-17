@@ -56,8 +56,13 @@ export default ({
 </script>
 
 <style scoped>
-/* Web */
-@media only screen and (min-width: 480px) {
+/* Phone */
+    @media only screen and (max-width: 480px) {
+        .experience {
+            width: 100%;
+        }
+    }
+
     .experience {
         display: flex;
         flex-direction: column;
@@ -66,23 +71,11 @@ export default ({
         text-align: center;
         padding: 8% 10% 8% 10%;
     }
-}
-/* Phone */
-@media only screen and (max-width: 480px) {
-    .experience {
+
+    .timeLine {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 8% 10% 8% 10%;
         width: 100%;
     }
-}
-.timeLine {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
 </style>

@@ -100,11 +100,6 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
-  /* text-align: center; */
-  /* color: #2c3e50; */
-  /* margin-top: 60px; */
 }
 
 body {

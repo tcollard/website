@@ -75,51 +75,70 @@ export default {
 
 <style scoped>
 
-.time {
-    display: flex;
-    flex-direction: row;
-}
+    .time {
+        display: flex;
+        flex-direction: row;
+    }
 
-.line {
-    width: 2px;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: orange;
-}
+    .line {
+        width: 2px;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: orange;
+    }
 
-.endLine {
-    width: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+    .endLine {
+        width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
-.date {
-    font-family: 'Roboto';
-    color: orange;
-    font-weight: 400;
-    font-size: 1.2em;
-    padding-bottom: 2%;
-}
+    .date {
+        font-family: 'Roboto';
+        color: orange;
+        font-weight: 400;
+        font-size: 1.2em;
+        padding-bottom: 2%;
+    }
 
-.left {
-    text-align: right;
-}
+    .left {
+        text-align: right;
+    }
 
-.right {
-    text-align: left;
-}
+    .right {
+        text-align: left;
+    }
 
-/* Web */
-@media only screen and (min-width: 480px) {
+    /* Web */
+    @media only screen and (min-width: 480px) {
+
+        .middleContainer {
+            width: 8%;
+        }
+
+        .leftSide, .rightSide {
+            width: 46%;
+        }
+    }
+
+    /* Phone */
+    @media only screen and (max-width: 480px) {
+        .middleContainer {
+            width: 12%;
+        }
+
+        .leftSide, .rightSide {
+            width: 44%;
+        }
+    }
 
     .middleContainer {
-        width: 8%;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -133,79 +152,57 @@ export default {
     }
 
     .leftSide, .rightSide {
-        width: 46%;
         display: flex;
     }
-}
 
-/* Phone */
-@media only screen and (max-width: 480px) {
-    .middleContainer {
-        width: 12%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+
+
+    .dot {
+        border-radius: 50%;
+        background-color: orange;
     }
 
-    .middle {
-        width: 2px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .paused {
+        animation-play-state: paused;
     }
 
-    .leftSide, .rightSide {
-        width: 44%;
-        display: flex;
+    .start {
+        animation-play-state: running;
     }
-}
 
-.dot {
-    border-radius: 50%;
-    background-color: orange;
-}
-
-.paused {
-    animation-play-state: paused;
-}
-
-.start {
-    animation-play-state: running;
-}
-
-.transitionDot {
-    animation-name: dotTransition;
-    animation-duration: .3s;
-    animation-timing-function: ease-in;
-    animation-delay: .6s;
-    animation-fill-mode: forwards;
-}
-
-.transitionLine {
-    animation-name: lineTransition;
-    animation-duration: .8s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0.6s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes dotTransition {
-    from {
-        height: 2px;
-        width: 2px;
+    .transitionDot {
+        animation-name: dotTransition;
+        animation-duration: .3s;
+        animation-timing-function: ease-in;
+        animation-delay: .6s;
+        animation-fill-mode: forwards;
     }
-    to {
-        height: 20px;
-        width: 20px;
-    }
-}
 
-@keyframes lineTransition {
-    from {
-        height: 0px;
+    .transitionLine {
+        animation-name: lineTransition;
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.6s;
+        animation-fill-mode: forwards;
     }
-    to {
-        height: 100%;
+
+    @keyframes dotTransition {
+        from {
+            height: 2px;
+            width: 2px;
+        }
+        to {
+            height: 20px;
+            width: 20px;
+        }
     }
-}
+
+    @keyframes lineTransition {
+        from {
+            height: 0px;
+        }
+        to {
+            height: 100%;
+        }
+    }
 </style>
