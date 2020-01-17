@@ -27,40 +27,38 @@ export default {
 <style scoped>
 /* Web */
 @media only screen and (min-width: 480px) {
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 8% 10% 8% 10%;
-        background-color: orange;
+    .contactText {
+        flex-shrink: 0;
     }
 }
 
 /* Phone */
 @media only screen and (max-width: 480px) {
     .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 8% 10% 8% 10%;
-        background-color: orange;
         width: 100%;
     }
 }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 8% 10% 8% 10%;
+        background-color: orange;
+    }
+
     .contactContainer {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
         justify-content: center;
     }
 
-    .addColor {
-        color: orange;
+    .contactText {
+        font-size: 1.4em;
+        font-weight: 400;
+        line-height: 0.9em;
+        font-family: 'Roboto Slab';
     }
 
     .img {
@@ -69,26 +67,9 @@ export default {
         margin-right: 5%;
     }
 
-    .contactText {
-        font-size: 1.4em;
-        font-weight: 400;
-        line-height: 0.9em;
-        font-family: 'Roboto Slab';
-        text-align: left;
-    }
-
     a {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
         text-decoration: none;
         color: white;
-    }
-
-    .linkContent {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
     }
 </style>
