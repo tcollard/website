@@ -192,7 +192,7 @@ a {
     font-size: 0.6em;
     text-align: center;
     font-weight: bold;
-    border-radius: 10%;
+    border-radius: 10px;
     padding: 1%;
     background-color: orange;
     margin: 2%;
@@ -204,7 +204,7 @@ a {
 .question {
     font-size: 1em;
     line-height: auto;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     text-align: center;
 }
 
