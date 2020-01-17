@@ -24,7 +24,7 @@ export default {
                     name: 'C',
                     rate: 90,
                 },
-                                {
+                {
                     name: 'UNIX / SHELL',
                     rate: 90,
                 },

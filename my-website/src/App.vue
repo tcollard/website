@@ -47,11 +47,12 @@ export default {
     isInView() {
       const scroll = window.scrollY || window.pageYOffset
         const viewport = {
-          top: scroll,
+            top: scroll,
             bottom: scroll + window.innerHeight,
         }
       let elJobTitle = document.getElementById('jobTitle');
       let elContact = document.getElementById('contact');
+      let elDescription = document.getElementById('description');
       let elScroll = document.getElementById('scrollBtn');
 
       if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
@@ -59,15 +60,18 @@ export default {
       } else if (elScroll.classList.contains('darkColorBtn')) {
         elScroll.classList.remove('darkColorBtn');
       }
-
-      if (scroll >= 100) {
-        elJobTitle.style.opacity = 0.1;
-        document.getElementsByClassName('post')[0].style.display = 'none';
+      let ratio = 0;
+      if (window.innerWidth > 480) {
+          ratio = ((scroll + elJobTitle.offsetHeight) *.75 - elDescription.offsetTop *.9) / 100;
       } else {
-        if (document.getElementsByClassName('post')[0].style.display === 'none') {
-          document.getElementsByClassName('post')[0].style.display = '';
-        }
-        elJobTitle.style.opacity = 1 - scroll / 100 + 0.15;
+          ratio = (scroll + elJobTitle.offsetHeight - elDescription.offsetTop) / 100;
+      }
+      if (1 - ratio + 0.1 > 0.1) {
+        elJobTitle.style.opacity = (1 - ratio + 0.1 >= 1) ? 1 : 1 - ratio + 0.1;
+        document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 >= 1) ? 1 : 1 - ratio + 0.1;
+      } else {
+        elJobTitle.style.opacity = 0.1;
+        document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 <= 0) ? 0 : 1 - ratio + 0.1;
       }
 
       for (let index = 0; index < this.allId.length; index++) {
