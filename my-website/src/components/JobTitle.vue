@@ -17,6 +17,7 @@ export default {
     margin-top: 100px;
     text-align: center;
     width: 100%;
+    z-index: -1;
 }
 
 .name {
@@ -24,7 +25,6 @@ export default {
     font-size: 4.5em;
     font-weight: bold;
     color: white;
-    z-index: -1;
 }
 
 .post {
