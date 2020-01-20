@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
-    <NavBar id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
-    <JobTitle id="jobTitle"></JobTitle>
-    <Description id="description"></Description>
-    <Skills id="skills"></Skills>
-    <PortfolioResume id="portfolio"></PortfolioResume>
-    <Experience id="experience"></Experience>
-    <Contact id="contact"></Contact>
+    <NavBar class="component" id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
+    <JobTitle class="component" id="jobTitle"></JobTitle>
+    <Description class="component" id="description"></Description>
+    <Skills class="component" id="skills"></Skills>
+    <PortfolioResume class="component" id="portfolio"></PortfolioResume>
+    <Experience class="component" id="experience"></Experience>
+    <Contact class="component" id="contact"></Contact>
   </div>
 </template>
 
@@ -166,5 +166,9 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
+}
+
+.component {
+  z-index: 1;
 }
 </style>
