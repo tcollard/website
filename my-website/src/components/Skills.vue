@@ -2,7 +2,7 @@
     <div class="skills">
         <h1 class="title">Compétences</h1>
         <div class="listSkills">
-            <div v-for="skill in skills" :key="skill" class="oneSkill">
+            <div v-for="(skill, index) in skills" :key="index" class="oneSkill">
                 <ProgressBar :skill="skill"></ProgressBar>
             </div>
         </div>
