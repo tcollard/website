@@ -71,5 +71,7 @@ export default {
         display: flex;
         text-decoration: none;
         color: white;
+        -webkit-tap-highlight-color: transparent;
     }
+
 </style>
