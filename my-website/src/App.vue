@@ -126,6 +126,7 @@ body {
 	border-color:orange;
 	text-decoration:none;
 	transition:all .3s ease-out;
+  z-index: 2;
 }
 
 .floatingBtn:before {
