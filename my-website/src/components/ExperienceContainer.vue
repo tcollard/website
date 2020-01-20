@@ -52,7 +52,10 @@ export default {
     methods: {
         isInView() {
             let elDot = document.getElementById(this.index + '-dot');
-            let elLine = document.getElementById(this.index + '-line');
+            let elLine;
+            if (this.index < this.length) {
+                elLine = document.getElementById(this.index + '-line');
+            }
             const scroll = window.scrollY || window.pageYOffset
             const viewport = {
                 top: scroll,
@@ -63,7 +66,9 @@ export default {
                     && elDot.offsetTop - viewport.top < window.innerHeight / 1.4) {
                 
                 elDot.classList.add('transitionDot');
-                elLine.classList.add('transitionLine');
+                if (this.index < this.length) {
+                    elLine.classList.add('transitionLine');
+                }
                 this.state = !this.state;
                 return true;
             }
