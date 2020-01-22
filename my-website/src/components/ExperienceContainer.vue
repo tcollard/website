@@ -1,7 +1,7 @@
 <template>
     <div class="time" v-on:scroll="create(index)">
         <div class="leftSide">
-            <ExperienceDetail :experience="experience" :index="index" :id="'left'"></experienceDetail>
+            <ExperienceDetail :xp="xp" :index="index" :id="'left'"></experienceDetail>
         </div>
         <div class="middleContainer">
             <div class="middle">
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="rightSide">
-            <ExperienceDetail :experience="experience" :index="index" :id="'right'"></experienceDetail>
+            <ExperienceDetail :xp="xp" :index="index" :id="'right'"></experienceDetail>
         </div>
     </div>
 </template>
@@ -32,8 +32,8 @@ export default {
             type: Number,
             required: true,
         },
-        experience: {
-            type: Object,
+        xp: {
+            type: String,
             required: true,
         },
     },

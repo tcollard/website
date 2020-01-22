@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <h1>Contact</h1>
+        <h1>{{ $t('contact.title') }}</h1>
         <div class="contactContainer">
             <a href="mailto:thibault.collard1@gmail.com">
                 <img class="img" src="../assets/mail.svg" alt="mail">

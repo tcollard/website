@@ -1,11 +1,11 @@
 <template>
-    <div v-bind:id="experience.date + id" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
-        <span v-if="index % 2 === 0 && id === 'right'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{experience.date}}</span>
-        <span v-if="index % 2 === 1 && id === 'left'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{experience.date}}</span>
+    <div v-bind:id="xp + id" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
+        <span v-if="index % 2 === 0 && id === 'right'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{ $t('experience.'+ xp +'.date') }}</span>
+        <span v-if="index % 2 === 1 && id === 'left'" class="date" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{ $t('experience.' + xp + '.date') }}</span>
         <div  class="containerDetail" v-if="index % 2 === 0 && id === 'left' || index % 2 === 1 && id === 'right'">
-            <span class="company">{{experience.company}}</span>
-            <span class="job">{{experience.job}}</span>
-            <span class="text">{{experience.description}}</span>
+            <span class="company">{{ $t('experience.' + xp + '.company') }}</span>
+            <span class="job">{{ $t('experience.' + xp + '.job') }}</span>
+            <span class="text">{{ $t('experience.' + xp + '.content') }}</span>
         </div>
     </div>
 </template>
@@ -14,8 +14,8 @@
 export default {
     name: 'ExperienceDetail',
     props: {
-        experience: {
-            type: Object,
+        xp: {
+            type: String,
             required: true,
         },
         index: {
@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         isInView() {
-            let el = document.getElementById(this.experience.date + this.id);
+            let el = document.getElementById(this.xp + this.id);
             const scroll = window.scrollY || window.pageYOffset
             const viewport = {
                 top: scroll,

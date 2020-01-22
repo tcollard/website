@@ -1,7 +1,6 @@
 <template>
     <div class="skills">
-        <h1 class="title">Compétences</h1>
-        <!-- <h1 class="title">Skills</h1> -->
+        <h1 class="title">{{ $t('navBar.skills') }}</h1>
         <div class="listSkills">
             <div v-for="(skill, index) in skills" :key="index" class="oneSkill">
                 <ProgressBar :skill="skill"></ProgressBar>
@@ -38,7 +37,7 @@ export default {
                     rate: 70,
                 },
                 {
-                    name: 'VueJS',
+                    name: 'Vue.js',
                     rate: 70,
                 },
                 {
@@ -46,7 +45,7 @@ export default {
                     rate: 80,
                 },
                 {
-                    name: 'JS / NodeJS',
+                    name: 'JS / Node.js',
                     rate: 85,
                 },
 
