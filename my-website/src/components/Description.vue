@@ -2,6 +2,7 @@
     <div class="description">
         <div class="title">
             <h1>À propos</h1>
+            <!-- <h1>About</h1> -->
         </div>
         <div class="descriptionContent text">
             <span class="text">
@@ -16,7 +17,8 @@ export default {
     name: 'Description',
     data () {
         return {
-            description: 'Aprés un parcours en ingénierie du bâtiment et des énergies, 42 m\'a offert l\'opportunité de découvrir et de me former au monde de l\'informatique.'
+            description: 'Aprés un parcours en ingénierie du bâtiment et des énergies, 42 m\'a offert l\'opportunité de découvrir et de me former à l\'informatique. Je suis intéressé par des technologies comme Flutter/Dart, vueJS.'
+            // description: 'After a course in building and energy engineering, 42 offered me the opportunity to discover and learn about computers. I\'m interested in technologies like Flutter/Dart, VueJS.'
         }
     }
 }

@@ -3,10 +3,15 @@
         <div class="nav-bar-web">
             <a class="ref" @click="downloadCV">CV</a>
             <a class="ref" href="#description" id="descriptionNav">À propos</a>
+            <!-- <a class="ref" href="#description" id="descriptionNav">About</a> -->
             <a class="ref" href="#skills" id="skillsNav">Compétences</a>
+            <!-- <a class="ref" href="#skills" id="skillsNav">Skills</a> -->
             <a class="ref" href="#portfolio" id="portfolioNav">Portfolio</a>
+            <!-- <a class="ref" href="#portfolio" id="portfolioNav">Portfolio</a> -->
             <a class="ref" href="#experience" id="experienceNav">Expérience</a>
+            <!-- <a class="ref" href="#experience" id="experienceNav">Experience</a> -->
             <a class="ref" href="#contact" id="contactNav">Contact</a>
+            <!-- <a class="ref" href="#contact" id="contactNav">Contact</a> -->
         </div>
         <div class="nav-bar-phone">
             <div class="menuIcon" @click="changeIcon">
@@ -18,17 +23,25 @@
         </div>
         <div class="listItems" @click="changeIcon">
             <a class="menuTitle" href="#description" id="descriptionPhone">À propos</a>
+            <!-- <a class="menuTitle" href="#description" id="descriptionPhone">About</a> -->
             <a class="menuTitle" href="#skills" id="skillsPhone">Compétences</a>
+            <!-- <a class="menuTitle" href="#skills" id="skillsPhone">Skills</a> -->
             <a class="menuTitle" href="#portfolio" id="portfolioPhone">Portfolio</a>
+            <!-- <a class="menuTitle" href="#portfolio" id="portfolioPhone">Portfolio</a> -->
             <a class="menuTitle" href="#experience" id="experiencePhone">Expérience</a>
+            <!-- <a class="menuTitle" href="#experience" id="experiencePhone">Experience</a> -->
             <a class="menuTitle" href="#contact" id="contactPhone">Contact</a>
+            <!-- <a class="menuTitle" href="#contact" id="contactPhone">Contact</a> -->
             <a class="menuTitle" @click="downloadCV">CV</a>
         </div>
         <div v-if="this.downloading" class="download">
             <h1 class="question">Voulez-vous télécharger<br>ce magnifique CV ?</h1>
+            <!-- <h1 class="question">Would you like to download<br>this magnificent CV ?</h1> -->
             <div class="answer">
                 <a class="answerText" @click="downloadCV" href="https://github.com/tcollard/CV/raw/master/THIBAULT%20COLLARD.pdf" download>Oui</a>
+                <!-- <a class="answerText" @click="downloadCV" href="https://github.com/tcollard/CV/raw/master/THIBAULT%20COLLARD.pdf" download>Yes</a> -->
                 <div class="answerText" @click="downloadCV">Non</div>
+                <div class="answerText" @click="downloadCV">No</div>
             </div>
         </div>
     </div>
