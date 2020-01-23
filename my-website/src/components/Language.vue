@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <div @click="changeLang('en')">en</div>
+        <div class="clickable" @click="changeLang('en')">en</div>
         <div>|</div>
-        <div @click="changeLang('fr')">fr</div>
+        <div class="clickable" @click="changeLang('fr')">fr</div>
     </div>
 </template>
 
@@ -23,18 +23,11 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        color: orange;
-        cursor: pointer;
-    }
-    @media only screen and (min-width: 480px) {
-        .container {
-            width: 60px;
-        }
+        width: 60px;
     }
 
-    @media only screen and (max-width: 480px) {
-        .container {
-            width: 30%;
-        }
+    .clickable {
+        cursor: pointer;
     }
+
 </style>

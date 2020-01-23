@@ -8,6 +8,7 @@
     <PortfolioResume class="component" id="portfolio"></PortfolioResume>
     <Experience class="component" id="experience"></Experience>
     <Contact class="component" id="contact"></Contact>
+    <LanguageSwitcher id="language" class="lang"></LanguageSwitcher>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import PortfolioResume from './components/PortfolioResume.vue'
 import Contact from './components/Contact.vue'
 import Experience from './components/Experience.vue'
 import JobTitle from './components/JobTitle.vue'
+import LanguageSwitcher from './components/Language.vue'
 
 export default {
   name: 'app',
@@ -30,6 +32,7 @@ export default {
     Contact,
     Experience,
     JobTitle,
+    LanguageSwitcher
   },
   data() {
     return {
@@ -54,12 +57,20 @@ export default {
       let elContact = document.getElementById('contact');
       let elDescription = document.getElementById('description');
       let elScroll = document.getElementById('scrollBtn');
+      let elLang = document.getElementById('language');
 
       if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
         elScroll.classList.add('darkColorBtn');
       } else if (elScroll.classList.contains('darkColorBtn')) {
         elScroll.classList.remove('darkColorBtn');
       }
+
+      if (elContact.offsetTop <= viewport.top + elLang.offsetTop) {
+        elLang.classList.add('langDarkColor');
+      } else if (elLang.classList.contains('langDarkColor')) {
+        elLang.classList.remove('langDarkColor');
+      }
+
       let ratio = 0;
       if (window.innerWidth > 480) {
           ratio = ((scroll + elJobTitle.offsetHeight) *.75 - elDescription.offsetTop *.9) / 100;
@@ -171,5 +182,17 @@ body {
 
 .component {
   z-index: 1;
+}
+
+.lang {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  color: orange;
+  z-index: 1;
+}
+
+.langDarkColor {
+  color: #39394C;
 }
 </style>

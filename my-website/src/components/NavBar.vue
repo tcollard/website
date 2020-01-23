@@ -7,7 +7,6 @@
             <a class="ref" href="#portfolio" id="portfolioNav">{{ $t('navBar.portfolio') }}</a>
             <a class="ref" href="#experience" id="experienceNav">{{ $t('navBar.experience') }}</a>
             <a class="ref" href="#contact" id="contactNav">{{ $t('navBar.contact') }}</a>
-            <LanguageSwitcher></LanguageSwitcher>
         </div>
         <div class="nav-bar-phone">
             <div class="menuIcon" @click="changeIcon">
@@ -24,7 +23,6 @@
             <a class="menuTitle" href="#experience" id="experiencePhone">{{ $t('navBar.experience') }}</a>
             <a class="menuTitle" href="#contact" id="contactPhone">{{ $t('navBar.contact') }}</a>
             <a class="menuTitle" @click="downloadCV">CV</a>
-            <LanguageSwitcher></LanguageSwitcher>
         </div>
         <div v-if="this.downloading" class="download">
             <h1 class="question">{{ $t('download.question') }}</h1>
@@ -37,14 +35,8 @@
 </template>
 
 <script>
-
-    import LanguageSwitcher from './Language.vue'
-    
     export default {
         name: 'NavBar',
-        components: {
-            LanguageSwitcher,
-        },
         props: {
             visibleId: {
                 type: String,
