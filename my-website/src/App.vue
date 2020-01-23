@@ -48,30 +48,24 @@ export default {
   },
   methods: {
     isInView() {
+      const elContact = document.getElementById('contact');
       const scroll = window.scrollY || window.pageYOffset
-        const viewport = {
-            top: scroll,
-            bottom: scroll + window.innerHeight,
-        }
+      const viewport = {
+        top: scroll,
+        bottom: scroll + window.innerHeight,
+      }
+
+      this.jobTitleChanger(scroll);
+      this.langChanger(elContact, viewport);
+      this.menuItemChanger(viewport);
+      this.scrollTopChanger(elContact, viewport);
+
+    },
+    jobTitleChanger(scroll) {
       let elJobTitle = document.getElementById('jobTitle');
-      let elContact = document.getElementById('contact');
       let elDescription = document.getElementById('description');
-      let elScroll = document.getElementById('scrollBtn');
-      let elLang = document.getElementById('language');
-
-      if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
-        elScroll.classList.add('darkColorBtn');
-      } else if (elScroll.classList.contains('darkColorBtn')) {
-        elScroll.classList.remove('darkColorBtn');
-      }
-
-      if (elContact.offsetTop <= viewport.top + elLang.offsetTop) {
-        elLang.classList.add('langDarkColor');
-      } else if (elLang.classList.contains('langDarkColor')) {
-        elLang.classList.remove('langDarkColor');
-      }
-
       let ratio = 0;
+      
       if (window.innerWidth > 480) {
           ratio = ((scroll + elJobTitle.offsetHeight) *.75 - elDescription.offsetTop *.9) / 100;
       } else {
@@ -84,15 +78,34 @@ export default {
         elJobTitle.style.opacity = 0.1;
         document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 <= 0) ? 0 : 1 - ratio + 0.1;
       }
-
+    },
+    langChanger(elContact, viewport) {
+      let elLang = document.getElementById('language');
+      
+      if (elContact.offsetTop <= viewport.top + elLang.offsetTop) {
+        elLang.classList.add('langDarkColor');
+      } else if (elLang.classList.contains('langDarkColor')) {
+        elLang.classList.remove('langDarkColor');
+      }
+    },
+    menuItemChanger(viewport) {
       for (let index = 0; index < this.allId.length; index++) {
-        let el = document.getElementById(this.allId[index]);
+          let el = document.getElementById(this.allId[index]);
         if (el.offsetTop >= viewport.top && el.offsetTop <= viewport.bottom) {
-          this.selectedId = this.allId[index];
+            this.selectedId = this.allId[index];
           return ;
         }
       }
-    }
+    },
+    scrollTopChanger(elContact, viewport){
+      let elScroll = document.getElementById('scrollBtn');
+      
+      if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
+        elScroll.classList.add('darkColorBtn');
+      } else if (elScroll.classList.contains('darkColorBtn')) {
+        elScroll.classList.remove('darkColorBtn');
+      }
+    },
   }
 }
 </script>
