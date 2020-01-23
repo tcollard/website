@@ -19,19 +19,19 @@
         },
         "iota": {
             "date": "2018",
-            "company": "SideProject Iota Amsterdam",
+            "company": "IOTA Smart Grid",
             "job": "Dev",
             "content": "Réalisation d'un PoC sur une smart grid (JS/nodeJs) suite au Hackathon IOTA à 42. Utilisation du réseau IOTA pour effectuer des micro-transactions (données et monétaires) entre les différents acteurs (IoT). Présentation du PoC avec IOTA à Amsterdam lors de la Blockchain Expo Europe 2018"
         },
         "42": {
             "date": "2017",
             "company": "42",
-            "job": "Student",
+            "job": "Étudiant",
             "content": "Suivi du cursus de 42, formation en programmation. Plusieurs projets en C de type recoder ls / printf, recréer un interpreteur de commande. Et initiation au web PHP / HTML / CSS (2 semaines de formation)"
         },
         "whv": {
             "date": "2015 - 2016",
-            "company": "WHV",
+            "company": "Working Holiday Visa",
             "job": "Australia",
             "content": "Séjour linguistique en Australie : découverte du pays et expériences pro (restauration, manutention, ferme)"
         },
@@ -78,6 +78,6 @@
     },
     "utils": {
         "yes": "Oui",
-        "no": "non"
+        "no": "Non"
     }
 }

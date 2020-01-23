@@ -24,7 +24,7 @@
             <a class="menuTitle" href="#experience" id="experiencePhone">{{ $t('navBar.experience') }}</a>
             <a class="menuTitle" href="#contact" id="contactPhone">{{ $t('navBar.contact') }}</a>
             <a class="menuTitle" @click="downloadCV">CV</a>
-            <!-- <LanguageSwitcher></LanguageSwitcher> -->
+            <LanguageSwitcher></LanguageSwitcher>
         </div>
         <div v-if="this.downloading" class="download">
             <h1 class="question">{{ $t('download.question') }}</h1>

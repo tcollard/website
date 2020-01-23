@@ -1,16 +1,40 @@
 <template>
-    <div class="locale-changer">
-        <select v-model="$i18n.locale">
-            <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
-        </select>
+    <div class="container">
+        <div @click="changeLang('en')">en</div>
+        <div>|</div>
+        <div @click="changeLang('fr')">fr</div>
     </div>
 </template>
 
 <script>
 export default {
     name: "LanguageSwitcher",
-    data() {
-        return { langs: ['fr', 'en'] }
+    methods: {
+        changeLang(lang) {
+            this.$root.$i18n.locale = lang;
+        }
     }
 }
 </script>
+
+<style scoped>
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: orange;
+        cursor: pointer;
+    }
+    @media only screen and (min-width: 480px) {
+        .container {
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .container {
+            width: 30%;
+        }
+    }
+</style>
