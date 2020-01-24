@@ -56,11 +56,11 @@
         "contact": "Contact"
     },
     "portfolio": {
-        "title": "portfolio",
+        "title": "Portfolio",
         "project": {
             "42sh": {
                 "title": "42SH",
-                "content": "<p class=\"text\">Bash-like shell It\\'s a command-line interpreter</p>"
+                "content": "<p class=\"text\">Bash-like shell It's a command-line interpreter</p>"
             },
             "iota": {
                 "title": "SMART GRID / IOTA",

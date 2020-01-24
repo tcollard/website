@@ -56,23 +56,23 @@
         "contact": "Contact"
     },
     "portfolio": {
-        "title": "portfolio",
+        "title": "Portfolio",
         "project": {
             "42sh": {
                 "title": "42SH",
-                "content": "<p class=\"text\">Développement d\\'un interpréteur de commande UNIX, comme BASH / ZSH</p>"
+                "content": "<p class=\"text\">Développement d'un interpréteur de commande UNIX, comme BASH / ZSH</p>"
             },
             "iota": {
                 "title": "SMART GRID / IOTA",
-                "content": "<p class=\"text\">PoC d\\'une smart grid utilisant le tangle IOTA, et réalisant des micro-transactions entre différents acteurs</p>"
+                "content": "<p class=\"text\">PoC d'une smart grid utilisant le tangle IOTA, et réalisant des micro-transactions entre différents acteurs</p>"
             },
             "gameJam": {
                 "title": "GAME JAM",
-                "content": "<p class=\"text\">Création d\\'un jeux lors de la gloabal game jam, avec <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a>, et moi même</p>"
+                "content": "<p class=\"text\">Création d'un jeux lors de la gloabal game jam, avec <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a>, et moi même</p>"
             },
             "flutterApp": {
                 "title": "FLUTTER APP",
-                "content": "<p class=\"text\">Projet personnel, pour me familiariser avec l\\'environement Flutter. Réalisation d\\'une application pouvant enregistrer et jouer des sons</p>"
+                "content": "<p class=\"text\">Projet personnel, pour me familiariser avec l'environement Flutter. Réalisation d'une application pouvant enregistrer et jouer des sons</p>"
             }
         }
     },
