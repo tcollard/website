@@ -121,7 +121,7 @@ export default {
     }
 
     /* Web */
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: 1024px) {
 
         .middleContainer {
             width: 8%;
@@ -133,7 +133,7 @@ export default {
     }
 
     /* Phone */
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 1024px) {
         .middleContainer {
             width: 12%;
         }

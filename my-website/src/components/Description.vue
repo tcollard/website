@@ -19,13 +19,13 @@ export default {
 
 <style scoped>
 /* Web */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 1024px) {
     .description {
         margin-top: 300px;
     }
 }
 /* Phone */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
     .description {
         margin-top: 125%;
         width: 100%;

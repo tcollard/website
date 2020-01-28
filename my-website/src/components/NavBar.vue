@@ -208,7 +208,7 @@ a {
     text-align: center;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 1024px) {
     .nav-bar-web {
         height: 60px;
         margin-bottom: 15px;
@@ -226,14 +226,13 @@ a {
     
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
     .nav-bar-web {
         display: none;
     }
 
     .nav-bar-phone {
         height: 60px;
-        /* margin-bottom: 15px; */
         display: flex;
         flex-direction: row-reverse;
         padding-right: 25px;
@@ -241,7 +240,7 @@ a {
     }
 
     .menuIcon {
-        width: 10%;
+        width: 40px;
         height: 45px;
         position: relative;
         cursor: pointer;

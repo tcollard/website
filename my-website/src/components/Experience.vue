@@ -26,7 +26,7 @@ export default ({
 
 <style scoped>
 /* Phone */
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 1024px) {
         .experience {
             width: 100%;
         }

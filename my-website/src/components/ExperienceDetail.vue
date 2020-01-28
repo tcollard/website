@@ -120,7 +120,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
     .text {
         hyphens: auto;
     }

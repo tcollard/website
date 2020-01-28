@@ -26,14 +26,14 @@ export default {
 
 <style scoped>
 /* Web */
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 1024px) {
     .contactText {
         flex-shrink: 0;
     }
 }
 
 /* Phone */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1024px) {
     .contact {
         width: 100%;
     }
