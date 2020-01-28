@@ -8,6 +8,7 @@
     <PortfolioResume class="component" id="portfolio"></PortfolioResume>
     <Experience class="component" id="experience"></Experience>
     <Contact class="component" id="contact"></Contact>
+    <InfoBottom class="component"></InfoBottom>
     <LanguageSwitcher id="language" class="lang"></LanguageSwitcher>
   </div>
 </template>
@@ -21,6 +22,7 @@ import Contact from './components/Contact.vue'
 import Experience from './components/Experience.vue'
 import JobTitle from './components/JobTitle.vue'
 import LanguageSwitcher from './components/Language.vue'
+import InfoBottom from './components/InfoBottom.vue';
 
 export default {
   name: 'app',
@@ -32,7 +34,8 @@ export default {
     Contact,
     Experience,
     JobTitle,
-    LanguageSwitcher
+    LanguageSwitcher,
+    InfoBottom
   },
   data() {
     return {
