@@ -194,6 +194,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
+    white-space: pre-line;
 }
 
 .component {

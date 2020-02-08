@@ -1,7 +1,7 @@
 {
     "about": {
         "title": "About",
-        "content": "After a course in building and energy engineering, 42 offered me the opportunity to discover and learn about computers. I'm interested in technologies like Flutter / Dart, Vue.js"
+        "content": "After a route in building and energy engineering, I chose to learn computer programming, and I started a course at school 42.\nI specialized in web and application development, using technologies such as Flutter / Dart, Vue.js."
     },
     "contact": {
         "title": "Contact"
@@ -14,32 +14,32 @@
         "neocity": {
             "date": "2019",
             "company": "Neocity",
-            "job": "Dev fullStack",
-            "content": "Realization of urban cross-platform application, via cordova / ionic. Use of Angular for the applications, and Node.js for the API"
+            "job": "Developer fullStack",
+            "content": "Realization of cross-platform applications for city dwellers, via Cordova / Ionic.\nUse of Angular for the applications and Node.js for the API."
         },
         "iota": {
             "date": "2018",
             "company": "IOTA Smart Grid",
-            "job": "Dev",
+            "job": "Developer",
             "content": "Realization of a PoC on a smart grid (JS/nodeJs) after the IOTA Hackathon at 42. Use of the IOTA network to perform micro-transactions (data and monetary) between the different actors (IoT). Presentation of PoC with IOTA in Amsterdam at the Blockchain Expo Europe 2018"
         },
         "42": {
             "date": "2017",
             "company": "42",
-            "job": "Student",
+            "job": "Student in Programming",
             "content": "Followed the curriculum of 42, training in programming. Several projects in C of type recoding ls / printf, recreate a command interpreter. And initiation to web PHP / HTML / CSS (2 weeks of training)"
         },
         "whv": {
             "date": "2015 - 2016",
-            "company": "Workin Holiday Visa",
-            "job": "Australia",
-            "content": "Language studies in Australia: discovery of the country and professional experiences (catering, handling, farm)"
+            "company": "Australia",
+            "job": "Working Holiday Visa",
+            "content": "Language studies in Australia: discovery of the country and various professional experiences"
         },
         "cepi": {
             "date": "2013 - 2015",
-            "company": "CEPI Ingénierie",
+            "company": "CEPI Ingéniérie",
             "job": "Thermicien",
-            "content": "In charge of project and realization of thermal study (RT 2012), plan and dimensioning Heating, Ventilation, Air-conditioning, and insulation of buildings"
+            "content": "Thermal study project manager (RT 2012)\nDesign and dimensioning of heating, ventilation, air-conditioning and insulation of buildings"
         },
         "cdb": {
             "date": "2012",
@@ -50,7 +50,7 @@
     },
     "navBar": {
         "about": "About",
-        "skills": "Skills",
+        "skills": "Languages & Techno",
         "portfolio": "Portfolio",
         "experience": "Experience",
         "contact": "Contact"
@@ -60,19 +60,19 @@
         "project": {
             "42sh": {
                 "title": "42SH",
-                "content": "<p class=\"text\">Bash-like shell It's a command-line interpreter</p>"
+                "content": "<p class=\"text\">Development of a UNIX shell, such as BASH / ZSH</p>"
             },
             "iota": {
                 "title": "SMART GRID / IOTA",
-                "content": "<p class=\"text\">PoC of a smart grid using the IOTA tangle, and performing micro-transactions between different actors.</p>"
+                "content": "<p class=\"text\">PoC of a smart grid using the IOTA tangle and performing micro-transactions between different actors.</p>"
             },
             "gameJam": {
                 "title": "GAME JAM",
-                "content": "<p class=\"text\">Making a game at the gloabal game jam, with <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a>, and myself</p>"
+                "content": "<p class=\"text\">Making a game at the Global Game Jam, with: <br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
             },
             "flutterApp": {
                 "title": "FLUTTER APP",
-                "content": "<p class=\"text\">Personal project, familiarize myself with the Flutter environment. Developed an application that can record and play sounds...</p>"
+                "content": "<p class=\"text\">Developed an application that can record and play sounds (Flutter / Dart)</p>"
             }
         }
     },

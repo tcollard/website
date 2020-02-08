@@ -21,11 +21,11 @@ export default {
         return {
             skills: [
                 {
-                    name: 'C',
-                    rate: 90,
+                    name: 'ANGULAR',
+                    rate: 70,
                 },
                 {
-                    name: 'UNIX / SHELL',
+                    name: 'C',
                     rate: 90,
                 },
                 {
@@ -33,20 +33,20 @@ export default {
                     rate: 60,
                 },
                 {
-                    name: 'ANGULAR',
-                    rate: 70,
-                },
-                {
-                    name: 'Vue.js',
-                    rate: 70,
-                },
-                {
                     name: 'HTML / CSS',
                     rate: 80,
                 },
                 {
-                    name: 'JS / Node.js',
+                    name: 'JS / NODE.JS',
                     rate: 85,
+                },
+                {
+                    name: 'UNIX / SHELL',
+                    rate: 90,
+                },
+                {
+                    name: 'VUE.JS',
+                    rate: 70,
                 },
 
             ]

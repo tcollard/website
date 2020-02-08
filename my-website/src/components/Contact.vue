@@ -8,7 +8,7 @@
             </a>
             <a href="https://fr.linkedin.com/in/thibault-collard-b8228168" target="_blank">
                 <img class="img" src="../assets/linkedin.svg" alt="linkedIn">
-                <p class="contactText">linkedin.com/in/thibault-collard-b8228168</p>
+                <p class="contactText">/thibault-collard-b8228168</p>
             </a>                
             <a  href="https://github.com/tcollard" target="_blank">
                 <img class="img" src="../assets/github.svg" alt="linkedIn">
