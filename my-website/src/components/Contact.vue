@@ -26,23 +26,22 @@ export default {
 
 <style scoped>
 /* Web */
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
     .contactText {
         flex-shrink: 0;
     }
-}
+} */
 
 /* Phone */
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
     .contact {
         width: 100%;
     }
-}
+} */
 
     .contact {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         padding: 8% 10% 8% 10%;
         background-color: orange;
@@ -62,7 +61,8 @@ export default {
     }
 
     .img {
-        width: 40px;
+        width: 7.5vw;
+        max-width: 40px;
         cursor: pointer;
         margin-right: 5%;
     }

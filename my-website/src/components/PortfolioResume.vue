@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
     /* Phone */
-    @media only screen and (max-width: 1024px) {
+    /* @media only screen and (max-width: 1024px) {
         .portfolio {
             width: 100%;
         }
-    }
+    } */
 
     .portfolio {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* align-items: center; */
         text-align: center;
         padding: 8% 10% 8% 10%;
     }

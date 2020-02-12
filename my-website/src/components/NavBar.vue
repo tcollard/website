@@ -212,10 +212,11 @@ a {
     .nav-bar-web {
         height: 60px;
         margin-bottom: 15px;
+        margin-top: 15px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         font-size: 1em;
     }
 
@@ -383,6 +384,7 @@ a {
         font-size: 1em;
         font-weight: 400;
         margin-bottom: 5%;
+        text-align: center;
     }
 
     .fullScreen {

@@ -14,28 +14,28 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-import Description from './components/Description.vue'
-import Skills from './components/Skills.vue'
-import PortfolioResume from './components/PortfolioResume.vue'
 import Contact from './components/Contact.vue'
+import Description from './components/Description.vue'
 import Experience from './components/Experience.vue'
+import InfoBottom from './components/InfoBottom.vue';
 import JobTitle from './components/JobTitle.vue'
 import LanguageSwitcher from './components/Language.vue'
-import InfoBottom from './components/InfoBottom.vue';
+import NavBar from './components/NavBar.vue'
+import PortfolioResume from './components/PortfolioResume.vue'
+import Skills from './components/Skills.vue'
 
 export default {
   name: 'app',
   components: {
-    NavBar,
-    Description,
-    Skills,
-    PortfolioResume,
     Contact,
+    Description,
     Experience,
+    InfoBottom,
     JobTitle,
     LanguageSwitcher,
-    InfoBottom
+    NavBar,
+    PortfolioResume,
+    Skills,
   },
   data() {
     return {
@@ -130,14 +130,13 @@ h1 {
   font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 body {
   margin: 0;
   background-color: #39394C;
   color: white;
-  width: 100%;
+  width: 100vw;
 }
 
 .fixe {

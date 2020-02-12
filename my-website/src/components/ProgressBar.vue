@@ -92,7 +92,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
-    width: 50%;
+    width: 40%;
 }
 .coloredBar {
     align-self: flex-start;

@@ -20,9 +20,20 @@ export default {
     z-index: 0;
 }
 
+@media only screen and (max-width: 1024px){
+    .name {
+        font-size: 18.5vw;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .name {
+        font-size: 4.5em;
+    }
+}
+
 .name {
     font-family: 'Roboto Slab';
-    font-size: 4.5em;
     font-weight: bold;
     color: white;
 }

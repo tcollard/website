@@ -93,6 +93,8 @@ export default {
     font-size: 2em;
     font-weight: 400;
     padding-bottom: 5%;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .leftPosition {

@@ -57,11 +57,11 @@ export default {
 
 <style scoped>
     /* Phone */
-    @media only screen and (max-width: 1024px) {
+    /* @media only screen and (max-width: 1024px) {
         .skills {
             width: 100%;
         }
-    }
+    } */
 
     .skills {
         display: flex;

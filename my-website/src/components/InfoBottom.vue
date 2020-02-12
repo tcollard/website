@@ -14,11 +14,11 @@ export default {
 </script>
 
 <style scoped>
-    @media only screen and (max-width: 1024px) {
+    /* @media only screen and (max-width: 1024px) {
         .footer {
             width: 100%;
         }
-    }
+    } */
     
     .footer {
         background-color: orange;
