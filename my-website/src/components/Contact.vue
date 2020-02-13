@@ -6,11 +6,11 @@
                 <img class="img" src="../assets/mail.svg" alt="mail">
                 <p class="contactText">thibault.collard1@gmail.com</p>
             </a>
-            <a href="https://fr.linkedin.com/in/thibault-collard-b8228168" target="_blank">
+            <a href="https://fr.linkedin.com/in/thibault-collard-b8228168" target="_blank" rel="noopener">
                 <img class="img" src="../assets/linkedin.svg" alt="linkedIn">
                 <p class="contactText">/thibault-collard-b8228168</p>
             </a>                
-            <a  href="https://github.com/tcollard" target="_blank">
+            <a  href="https://github.com/tcollard" target="_blank" rel="noopener">
                 <img class="img" src="../assets/github.svg" alt="linkedIn">
                 <p class="contactText">github.com/tcollard</p>
             </a>

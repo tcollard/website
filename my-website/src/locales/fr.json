@@ -68,7 +68,7 @@
             },
             "gameJam": {
                 "title": "GAME JAM",
-                "content": "<p>Création d'un jeux lors de la Global Game Jam, en collaboration avec:<br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
+                "content": "<p>Création d'un jeux lors de la Global Game Jam, en collaboration avec:<br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\" rel=\"noopener\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\" rel=\"noopener\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\" rel=\"noopener\">Jeff Guerin (Sound Designer)</a></p>"
             },
             "flutterApp": {
                 "title": "FLUTTER APP",

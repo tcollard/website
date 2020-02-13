@@ -5,7 +5,7 @@
             <div class="project" v-for="(project, index) in projects" :key="index">
                 <div class="title">{{ $t('portfolio.project.' + project.id + '.title') }}</div>
                 <span class="htmlText" v-html="$t('portfolio.project.' + project.id + '.content')"></span>
-                <a class="link text" :href="project.link" target="_blank">Lien</a>
+                <a class="link text" :href="project.link" target="_blank" rel="noopener">Lien</a>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <p>Thibault Collard © 2020</p>
-        <a href="https://github.com/tcollard/website/tree/master/my-website" target="_blank">
+        <a href="https://github.com/tcollard/website/tree/master/my-website" target="_blank" rel="noopener">
             <img class="img" src="../assets/github.svg" alt="linkedIn">
         </a>
     </div>
