@@ -60,19 +60,19 @@
         "project": {
             "42sh": {
                 "title": "42SH",
-                "content": "<p class=\"text\">Développement d'un interpréteur de commande UNIX, comme BASH / ZSH</p>"
+                "content": "<p>Développement d'un interpréteur de commande UNIX, comme BASH / ZSH</p>"
             },
             "iota": {
                 "title": "SMART GRID / IOTA",
-                "content": "<p class=\"text\">PoC d'une smart grid utilisant le tangle IOTA et réalisant des micro-transactions entre différents acteurs</p>"
+                "content": "<p>PoC d'une smart grid utilisant le tangle IOTA et réalisant des micro-transactions entre différents acteurs</p>"
             },
             "gameJam": {
                 "title": "GAME JAM",
-                "content": "<p class=\"text\">Création d'un jeux lors de la Global Game Jam, en collaboration avec:<br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
+                "content": "<p>Création d'un jeux lors de la Global Game Jam, en collaboration avec:<br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
             },
             "flutterApp": {
                 "title": "FLUTTER APP",
-                "content": "<p class=\"text\">Réalisation d'une application pouvant enregistrer et jouer des sons (Flutter / Dart)</p>"
+                "content": "<p>Réalisation d'une application pouvant enregistrer et jouer des sons (Flutter / Dart)</p>"
             }
         }
     },

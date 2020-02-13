@@ -121,9 +121,24 @@ html{
 }
 
 h1 {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  color: white;
+}
+
+h2 {
   font-size: 3.2em;
   font-weight: 400;
   margin-bottom: 10%;
+  text-align: center;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    white-space: pre-line;
 }
 
 #app {
@@ -137,6 +152,7 @@ body {
   background-color: #39394C;
   color: white;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 .fixe {

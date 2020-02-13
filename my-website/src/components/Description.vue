@@ -1,12 +1,8 @@
 <template>
     <div class="description">
-        <div class="title">
-            <h1>{{ $t('about.title') }}</h1>
-        </div>
-        <div class="descriptionContent text">
-            <span class="text">
-                {{ $t('about.content') }}
-            </span>
+            <h2>{{ $t('about.title') }}</h2>
+        <div class="descriptionContent">
+            <p>{{ $t('about.content') }}</p>
         </div>
     </div>
 </template>
@@ -28,33 +24,17 @@ export default {
 @media only screen and (max-width: 1024px) {
     .description {
         margin-top: 125%;
-        /* width: 100%; */
     }
 }
 
     .description {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        /* width: 80vw; */
         padding: 8% 10% 8% 10%;
     }
 
-
-    .title {
-        /* display: flex;
-        flex-direction: column; */
-        text-align: center;
-        margin-bottom: 5%;
-    }
-
     .descriptionContent {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center; */
         padding: 2%;
-        /* border-radius: 10px; */
         text-align: center;
     }
 

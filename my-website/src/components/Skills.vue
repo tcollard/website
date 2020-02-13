@@ -1,6 +1,6 @@
 <template>
     <div class="skills">
-        <h1 class="title">{{ $t('navBar.skills') }}</h1>
+        <h2>{{ $t('navBar.skills') }}</h2>
         <div class="listSkills">
             <div v-for="(skill, index) in skills" :key="index" class="oneSkill">
                 <ProgressBar :skill="skill"></ProgressBar>
@@ -56,13 +56,6 @@ export default {
 </script>
 
 <style scoped>
-    /* Phone */
-    /* @media only screen and (max-width: 1024px) {
-        .skills {
-            width: 100%;
-        }
-    } */
-
     .skills {
         display: flex;
         flex-direction: column;
@@ -82,9 +75,5 @@ export default {
         width: 100%;
         margin-top: 2%;
         margin-bottom: 2%;
-    }
-
-    .title {
-        align-self: center;
     }
 </style>

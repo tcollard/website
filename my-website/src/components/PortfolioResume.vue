@@ -1,6 +1,6 @@
 <template>
     <div class="portfolio">
-        <h1>{{ $t('portfolio.title') }}</h1>
+        <h2>{{ $t('portfolio.title') }}</h2>
         <div class="container">
             <div class="project" v-for="(project, index) in projects" :key="index">
                 <div class="title">{{ $t('portfolio.project.' + project.id + '.title') }}</div>
@@ -40,19 +40,7 @@ export default {
 </script>
 
 <style scoped>
-
-    /* Phone */
-    /* @media only screen and (max-width: 1024px) {
-        .portfolio {
-            width: 100%;
-        }
-    } */
-
     .portfolio {
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* align-items: center; */
         text-align: center;
         padding: 8% 10% 8% 10%;
     }

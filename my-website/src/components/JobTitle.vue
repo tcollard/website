@@ -1,7 +1,7 @@
 <template>
     <div class="title">
-        <span class="name">THIBAULT COLLARD</span>
-        <h1 class="post">Dev full stack JS</h1>
+        <h1 class="name">THIBAULT COLLARD</h1>
+        <p class="post">Dev full stack JS</p>
     </div>
 </template>
 
@@ -32,14 +32,11 @@ export default {
     }
 }
 
-.name {
-    font-family: 'Roboto Slab';
-    font-weight: bold;
-    color: white;
-}
-
 .post {
     color: orange;
+    font-size: 3.2em;
+    font-weight: 400;
+    margin-bottom: 10%;
 }
 
 </style>

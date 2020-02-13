@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <h1>{{ $t('contact.title') }}</h1>
+        <h2>{{ $t('contact.title') }}</h2>
         <div class="contactContainer">
             <a href="mailto:thibault.collard1@gmail.com">
                 <img class="img" src="../assets/mail.svg" alt="mail">
@@ -25,20 +25,6 @@ export default {
 </script>
 
 <style scoped>
-/* Web */
-/* @media only screen and (min-width: 1024px) {
-    .contactText {
-        flex-shrink: 0;
-    }
-} */
-
-/* Phone */
-/* @media only screen and (max-width: 1024px) {
-    .contact {
-        width: 100%;
-    }
-} */
-
     .contact {
         display: flex;
         flex-direction: column;

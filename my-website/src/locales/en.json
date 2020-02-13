@@ -60,19 +60,19 @@
         "project": {
             "42sh": {
                 "title": "42SH",
-                "content": "<p class=\"text\">Development of a UNIX shell, such as BASH / ZSH</p>"
+                "content": "<p>Development of a UNIX shell, such as BASH / ZSH</p>"
             },
             "iota": {
                 "title": "SMART GRID / IOTA",
-                "content": "<p class=\"text\">PoC of a smart grid using the IOTA tangle and performing micro-transactions between different actors.</p>"
+                "content": "<p>PoC of a smart grid using the IOTA tangle and performing micro-transactions between different actors.</p>"
             },
             "gameJam": {
                 "title": "GAME JAM",
-                "content": "<p class=\"text\">Making a game at the Global Game Jam, with: <br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
+                "content": "<p>Making a game at the Global Game Jam, with: <br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\">Jeff Guerin (Sound Designer)</a></p>"
             },
             "flutterApp": {
                 "title": "FLUTTER APP",
-                "content": "<p class=\"text\">Developed an application that can record and play sounds (Flutter / Dart)</p>"
+                "content": "<p>Developed an application that can record and play sounds (Flutter / Dart)</p>"
             }
         }
     },

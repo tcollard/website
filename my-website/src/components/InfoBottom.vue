@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <p class="text">Thibault Collard © 2020</p>
+        <p>Thibault Collard © 2020</p>
         <a href="https://github.com/tcollard/website/tree/master/my-website" target="_blank">
             <img class="img" src="../assets/github.svg" alt="linkedIn">
         </a>
@@ -14,12 +14,6 @@ export default {
 </script>
 
 <style scoped>
-    /* @media only screen and (max-width: 1024px) {
-        .footer {
-            width: 100%;
-        }
-    } */
-    
     .footer {
         background-color: orange;
         display: flex;

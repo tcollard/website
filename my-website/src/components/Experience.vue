@@ -1,6 +1,6 @@
 <template>
     <div class="experience">
-        <h1>{{ $t('experience.title') }}</h1>
+        <h2>{{ $t('experience.title') }}</h2>
         <div class="timeLine" v-for="(experience, index) in experiences" :key="index">
             <ExperienceContainer :index="index" :xp="experience" :length="experiences.length - 1"></ExperienceContainer>
         </div>
@@ -25,18 +25,7 @@ export default ({
 </script>
 
 <style scoped>
-/* Phone */
-    /* @media only screen and (max-width: 1024px) {
-        .experience {
-            width: 100%;
-        }
-    }
- */
     .experience {
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        /* align-items: center; */
         text-align: center;
         padding: 8% 10% 8% 10%;
     }
