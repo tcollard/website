@@ -20,7 +20,7 @@ export default {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 0% 10% 0% 10%;
+        padding: 0% 10% 2% 10%;
     }
 
     .img {

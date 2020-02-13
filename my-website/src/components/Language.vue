@@ -1,8 +1,14 @@
 <template>
     <div class="container">
-        <div class="clickable" @click="changeLang('en')">en</div>
-        <div>|</div>
-        <div class="clickable" @click="changeLang('fr')">fr</div>
+        <div class="clickable" @click="changeLang('en')">
+            <p>en</p>
+        </div>
+        <div>
+            <p>|</p>
+        </div>
+        <div class="clickable" @click="changeLang('fr')">
+            <p>fr</p>
+        </div>
     </div>
 </template>
 

@@ -39,8 +39,13 @@ export default {
         justify-content: center;
     }
 
+    @media only screen and (min-width: 1024px){
+        .contactText {
+            font-size: 1.4em;
+        }
+    }
+
     .contactText {
-        font-size: 1.4em;
         font-weight: 400;
         line-height: 0.9em;
         font-family: 'Roboto Slab';
