@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
-    <NavBar class="component" id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
+    <NavBar id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
     <JobTitle class="component" id="jobTitle"></JobTitle>
     <Description class="component" id="description"></Description>
     <Skills class="component" id="skills"></Skills>
@@ -9,7 +8,10 @@
     <Experience class="component" id="experience"></Experience>
     <Contact class="component" id="contact"></Contact>
     <InfoBottom class="component"></InfoBottom>
-    <LanguageSwitcher id="language" class="lang"></LanguageSwitcher>
+    <div class="bottomBtn component" id="bottomBtn">
+      <LanguageSwitcher id="language" class="lang"></LanguageSwitcher>
+        <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
+    </div>
   </div>
 </template>
 
@@ -59,9 +61,8 @@ export default {
       }
 
       this.jobTitleChanger(scroll);
-      this.langChanger(elContact, viewport);
       this.menuItemChanger(viewport);
-      this.scrollTopChanger(elContact, viewport);
+      this.changeColor(elContact, viewport);
 
     },
     jobTitleChanger(scroll) {
@@ -82,15 +83,6 @@ export default {
         document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 <= 0) ? 0 : 1 - ratio + 0.1;
       }
     },
-    langChanger(elContact, viewport) {
-      let elLang = document.getElementById('language');
-      
-      if (elContact.offsetTop <= viewport.top + elLang.offsetTop) {
-        elLang.classList.add('langDarkColor');
-      } else if (elLang.classList.contains('langDarkColor')) {
-        elLang.classList.remove('langDarkColor');
-      }
-    },
     menuItemChanger(viewport) {
       for (let index = 0; index < this.allId.length; index++) {
           let el = document.getElementById(this.allId[index]);
@@ -100,13 +92,17 @@ export default {
         }
       }
     },
-    scrollTopChanger(elContact, viewport){
+    changeColor(elContact, viewport){
       let elScroll = document.getElementById('scrollBtn');
+      let elBottomBtn = document.getElementById('bottomBtn');
+      let elLang = document.getElementById('language');
       
-      if (elContact.offsetTop <= viewport.top + elScroll.offsetTop) {
+      if (elContact.offsetTop <= viewport.top + elBottomBtn.offsetTop) {
+        elLang.classList.add('langDarkColor');
         elScroll.classList.add('darkColorBtn');
       } else if (elScroll.classList.contains('darkColorBtn')) {
         elScroll.classList.remove('darkColorBtn');
+        elLang.classList.remove('langDarkColor');
       }
     },
   }
@@ -159,33 +155,51 @@ body {
   display: block;
 }
 
+.bottomBtn {
+  position: fixed;
+  width: 100%;
+  height: 6vh;
+  bottom: 0;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang {
+  color: orange;
+  z-index: 2;
+}
+
 .floatingBtn {
   color:orange;
   cursor: pointer;
-	position:fixed;
-  bottom: 70px;
-  right: 65px;
-	border-color:orange;
 	text-decoration:none;
+  border: solid 3px orange;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 	transition:all .3s ease-out;
   z-index: 2;
+  margin-right: 2%;
 }
 
 .floatingBtn:before {
   content:'▲';
   text-align: center;
 	font-size:1.9em;
-	position: inherit;
-	border:solid 3px orange;
-	border-radius:10em;
 	width:1.5em;
 	height:1.5em;
 	line-height:1.3em;
-	border-color:inherit;
 	transition:transform .5s ease-in;
 }
 
-.floatingBtn:hover:before{
+.floatingBtn:hover:before, .floatingBtn:focus:before, .floatingBtn:active:before {
   transform: rotate(360deg);
 }
 
@@ -213,14 +227,6 @@ body {
 }
 
 .component {
-  z-index: 1;
-}
-
-.lang {
-  position: fixed;
-  bottom: 15px;
-  left: 10px;
-  color: orange;
   z-index: 1;
 }
 

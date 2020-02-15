@@ -29,7 +29,8 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        width: 60px;
+        width: 45px;
+        margin-left: 2%;
     }
 
     .clickable {

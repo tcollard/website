@@ -22,11 +22,11 @@ export default {
             skills: [
                 {
                     name: 'ANGULAR',
-                    rate: 70,
+                    rate: 65,
                 },
                 {
                     name: 'C',
-                    rate: 90,
+                    rate: 80,
                 },
                 {
                     name: 'DART /FLUTTER',
@@ -34,19 +34,19 @@ export default {
                 },
                 {
                     name: 'HTML / CSS',
-                    rate: 80,
+                    rate: 75,
                 },
                 {
                     name: 'JS / NODE.JS',
-                    rate: 85,
+                    rate: 70,
                 },
                 {
                     name: 'UNIX / SHELL',
-                    rate: 90,
+                    rate: 80,
                 },
                 {
                     name: 'VUE.JS',
-                    rate: 70,
+                    rate: 65,
                 },
 
             ]

@@ -21,10 +21,11 @@ export default {
         justify-content: center;
         align-items: center;
         padding: 0% 10% 2% 10%;
+        height: 6vh;
     }
 
     .img {
-        width: 15px;
+        width: 20px;
         cursor: pointer;
         margin-left: 10px;
     }
