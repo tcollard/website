@@ -84,8 +84,8 @@
                 let elBottom = document.getElementById('bottom');
                 let elList = document.getElementsByClassName('listItems')[0];
                 let elNav = document.getElementById('navbar');
-                let scrollPositionY = window.pageYOffset;
-                let scrollPositionX = window.pageXOffset;
+                let componentArray = document.getElementsByClassName('component');
+
                 if (this.iconPos === 'init') {
                     this.iconPos = 'cross';
                     elMiddle1.classList.add('middle1ToCross');
@@ -94,9 +94,11 @@
                     elBottom.classList.add('hideBar');
                     elList.classList.add('open');
                     elNav.classList.add('fullScreen');
-                    window.onscroll = () => {
-                        window.scrollTo(scrollPositionX, scrollPositionY);
-                    };
+                    
+                    document.body.style.overflowY = 'hidden';
+                    componentArray.forEach(comp => {
+                        comp.style.visibility = 'hidden';
+                    });
 
                     if (elMiddle1.classList.contains('middle1ToInit')) {
                         elMiddle1.classList.remove('middle1ToInit');
@@ -114,6 +116,12 @@
                     elBottom.classList.remove('showBar');
                     elNav.classList.remove('fullScreen');
                     elList.classList.remove('open');
+                    document.body.style.overflowY = '';
+
+                    componentArray.forEach(comp => {
+                        comp.style.visibility = '';
+                    });
+
                     elMiddle1.classList.add('middle1ToInit');
                     elMiddle2.classList.add('middle2ToInit');
                     elTop.classList.add('showBar');
@@ -125,6 +133,9 @@
             },
             downloadCV() {
                 this.downloading = !this.downloading;
+                setTimeout(() => {
+                    document.body.style.overflowY = (this.downloading) ? 'hidden' : '';
+                });
             }
         }
     }
@@ -144,10 +155,10 @@ a {
 .listItems {
     display: none;
     flex-direction: column;
-    z-index: 100;
     font-size: 3em;
-    width: 100%;
-    align-items: center;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    overflow-y: scroll;
 }
 
 .changeColor {
@@ -241,8 +252,8 @@ a {
     }
 
     .menuIcon {
-        width: 40px;
-        height: 45px;
+        width: 2em;
+        height: 2.5em;
         position: relative;
         cursor: pointer;
     }
@@ -264,7 +275,6 @@ a {
 
     .open {
         display: flex;
-        height: 100%;
     }
 
     .close {
