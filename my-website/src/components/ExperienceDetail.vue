@@ -1,13 +1,23 @@
 <template>
-    <div v-bind:id="xp + id" class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
-        <h5 v-if="index % 2 === 0 && id === 'right'" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{ $t('experience.'+ xp +'.date') }}</h5>
-        <h5 v-if="index % 2 === 1 && id === 'left'" :class="index % 2 === 0 ? 'rightPosition' : 'leftPosition'">{{ $t('experience.' + xp + '.date') }}</h5>
-        <div class="containerDetail" v-if="index % 2 === 0 && id === 'left' || index % 2 === 1 && id === 'right'">
-            <h4>{{ $t('experience.' + xp + '.company') }}</h4>
-            <h3>{{ $t('experience.' + xp + '.job') }}</h3>
-            <p>{{ $t('experience.' + xp + '.content') }}</p>
+        <div v-if="deviceWidth > 700" class="contentWrapper" v-bind:id="xp + id">
+            <div class="detail" :class="index % 2 === 0 ? 'leftPosition' : 'rightPosition'">
+                <h5 v-if="index % 2 === 0 && id === 'right'" :class="'rightPosition'">{{ $t('experience.'+ xp +'.date') }}</h5>
+                <h5 v-if="index % 2 === 1 && id === 'left'" :class="'leftPosition'">{{ $t('experience.' + xp + '.date') }}</h5>
+                <div class="containerDetail" v-if="index % 2 === 0 && id === 'left' || index % 2 === 1 && id === 'right'">
+                    <h4>{{ $t('experience.' + xp + '.company') }}</h4>
+                    <h3>{{ $t('experience.' + xp + '.job') }}</h3>
+                    <p>{{ $t('experience.' + xp + '.content') }}</p>
+                </div>
+            </div>
         </div>
-    </div>
+        <div v-else class="contentWrapper" v-bind:id="xp + id">
+            <h5 v-if="id === 'left'" :class="'datePhone'">{{ $t('experience.' + xp +'.date') }}</h5>
+            <div v-else class="containerDetailPhone">
+                <h4>{{ $t('experience.' + xp + '.company') }}</h4>
+                <h3>{{ $t('experience.' + xp + '.job') }}</h3>
+                <p>{{ $t('experience.' + xp + '.content') }}</p>
+            </div>
+        </div>
 </template>
 
 <script>
@@ -24,6 +34,10 @@ export default {
         },
         id: {
             type: String,
+            required: true,
+        },
+        deviceWidth: {
+            type: Number,
             required: true,
         }
     },
@@ -62,6 +76,11 @@ export default {
 
 <style scoped>
 
+    .contentWrapper {
+        width: 100%;
+        opacity: 0;
+    }
+
     h3 {
         font-size: 2em;
         font-weight: 400;
@@ -91,12 +110,18 @@ export default {
         flex-direction: column;
     }
 
+    .containerDetailPhone {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-bottom: 25%;
+    }
+
     .detail {
         display: flex;
         flex-direction: column;
         text-align: center;
         width: 100%;
-        opacity: 0;
         margin-bottom: 50px;
     }
 
@@ -106,6 +131,12 @@ export default {
 
     .rightPosition {
         text-align: left;
+    }
+
+    .datePhone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .transitionOpacity {

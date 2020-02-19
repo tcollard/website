@@ -1,16 +1,32 @@
 <template>
     <div class="time" v-on:scroll="create(index)">
-        <div class="leftSide">
-            <ExperienceDetail :xp="xp" :index="index" :id="'left'"></experienceDetail>
-        </div>
-        <div class="middleContainer">
-            <div class="middle">
-                <div class="dot" :id="index + '-dot'"></div>
-                <div v-if="index != length" class="line" :id="index + '-line'"></div>
+        <div v-if="deviceWidth > 700" class="timeLineView">
+            <div class="leftSide">
+                <ExperienceDetail :xp="xp" :index="index" :id="'left'" :deviceWidth="deviceWidth"></experienceDetail>
+            </div>
+            <div class="middleContainer">
+                <div class="middle">
+                    <div class="dot" :id="index + '-dot'"></div>
+                    <div v-if="index != length" class="line" :id="index + '-line'"></div>
+                </div>
+            </div>
+            <div class="rightSide">
+                <ExperienceDetail :xp="xp" :index="index" :id="'right'" :deviceWidth="deviceWidth"></experienceDetail>
             </div>
         </div>
-        <div class="rightSide">
-            <ExperienceDetail :xp="xp" :index="index" :id="'right'"></experienceDetail>
+        <div v-else class="timeLineViewPhone">
+            <div class="leftSide">
+                <ExperienceDetail :xp="xp" :index="index" :id="'left'" :deviceWidth="deviceWidth"></experienceDetail>
+            </div>
+            <div class="middleContainer">
+                <div class="middle">
+                    <div class="dot" :id="index + '-dot'"></div>
+                    <div v-if="index != length" class="line" :id="index + '-line'"></div>
+                </div>
+            </div>
+            <div class="rightSide">
+                <ExperienceDetail :xp="xp" :index="index" :id="'right'" :deviceWidth="deviceWidth"></experienceDetail>
+            </div>
         </div>
     </div>
 </template>
@@ -40,6 +56,7 @@ export default {
     data() {
         return {
             state: false,
+            deviceWidth: window.innerWidth,
         }
     },
     created() {
@@ -95,6 +112,16 @@ export default {
         background-color: orange;
     }
 
+    .timeLineView {
+        width: 100vw;
+        display: flex;
+    }
+
+    .timeLineViewPhone {
+        display: grid;
+        grid-template-columns: 15% 10% 75%; 
+    }
+
     .endLine {
         width: 2px;
         display: flex;
@@ -121,7 +148,7 @@ export default {
     }
 
     /* Web */
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 700px) {
 
         .middleContainer {
             width: 8%;
@@ -133,13 +160,17 @@ export default {
     }
 
     /* Phone */
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 700px) {
         .middleContainer {
             width: 12%;
         }
 
-        .leftSide, .rightSide {
-            width: 44%;
+        .rightSideSide {
+            width: 66%;
+        }
+
+        .leftSide {
+            width: 20%;
         }
     }
 
@@ -159,8 +190,6 @@ export default {
     .leftSide, .rightSide {
         display: flex;
     }
-
-
 
     .dot {
         border-radius: 50%;
