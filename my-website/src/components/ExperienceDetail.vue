@@ -11,8 +11,8 @@
             </div>
         </div>
         <div v-else class="contentWrapper" v-bind:id="xp + id">
-            <h5 v-if="id === 'left'" :class="'datePhone'">{{ $t('experience.' + xp +'.date') }}</h5>
-            <div v-else class="containerDetailPhone">
+            <h5 :class="'datePhone'">{{ $t('experience.' + xp +'.date') }}</h5>
+            <div class="containerDetailPhone">
                 <h4>{{ $t('experience.' + xp + '.company') }}</h4>
                 <h3>{{ $t('experience.' + xp + '.job') }}</h3>
                 <p>{{ $t('experience.' + xp + '.content') }}</p>
@@ -114,7 +114,7 @@ export default {
         display: flex;
         flex-direction: column;
         text-align: left;
-        padding-bottom: 25%;
+        padding-bottom: 15%;
     }
 
     .detail {
@@ -135,7 +135,7 @@ export default {
 
     .datePhone {
         display: flex;
-        justify-content: center;
+        padding-bottom: 5%;
         align-items: center;
     }
 

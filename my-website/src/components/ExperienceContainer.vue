@@ -15,9 +15,6 @@
             </div>
         </div>
         <div v-else class="timeLineViewPhone">
-            <div class="leftSide">
-                <ExperienceDetail :xp="xp" :index="index" :id="'left'" :deviceWidth="deviceWidth"></experienceDetail>
-            </div>
             <div class="middleContainer">
                 <div class="middle">
                     <div class="dot" :id="index + '-dot'"></div>
@@ -119,7 +116,7 @@ export default {
 
     .timeLineViewPhone {
         display: grid;
-        grid-template-columns: 15% 10% 75%; 
+        grid-template-columns: 10% 90%; 
     }
 
     .endLine {
