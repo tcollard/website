@@ -196,11 +196,16 @@ body {
 	width:1.5em;
 	height:1.5em;
 	line-height:1.3em;
-	transition:transform .5s ease-in;
 }
 
-.floatingBtn:hover:before, .floatingBtn:focus:before, .floatingBtn:active:before {
-  transform: rotate(360deg);
+@media only screen and (min-width: 1024px){
+  .floatingBtn:before {
+    transition:transform .5s ease-in;
+  }
+
+  .floatingBtn:hover:before {
+    transform: rotate(360deg);
+  }
 }
 
 .darkColorBtn {
