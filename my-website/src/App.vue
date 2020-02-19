@@ -8,9 +8,9 @@
     <Experience class="component" id="experience"></Experience>
     <Contact class="component" id="contact"></Contact>
     <InfoBottom class="component"></InfoBottom>
-    <div class="bottomBtn component" id="bottomBtn">
-      <LanguageSwitcher id="language" class="lang"></LanguageSwitcher>
-        <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
+    <div class="component bottomBtn" id="bottomBtn" :class="deviceWidth > 700 ? 'bottomBtnWeb'  : 'bottomBtnPhone'">
+      <LanguageSwitcher  v-if="deviceWidth > 700" id="language" class="lang"></LanguageSwitcher>
+      <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
     </div>
   </div>
 </template>
@@ -43,6 +43,7 @@ export default {
     return {
       allId: ['description', 'skills', 'portfolio', 'experience', 'contact'],
       selectedId: null,
+      deviceWidth: window.innerWidth,
     }
   },
   created() {
@@ -95,14 +96,17 @@ export default {
     changeColor(elContact, viewport){
       let elScroll = document.getElementById('scrollBtn');
       let elBottomBtn = document.getElementById('bottomBtn');
-      let elLang = document.getElementById('language');
+      let elLang = null;
+      if (this.deviceWidth > 700) {
+        elLang = document.getElementById('language');
+      }
       
       if (elContact.offsetTop <= viewport.top + elBottomBtn.offsetTop) {
-        elLang.classList.add('langDarkColor');
+        if (elLang) elLang.classList.add('langDarkColor');
         elScroll.classList.add('darkColorBtn');
       } else if (elScroll.classList.contains('darkColorBtn')) {
+        if (elLang) elLang.classList.remove('langDarkColor');
         elScroll.classList.remove('darkColorBtn');
-        elLang.classList.remove('langDarkColor');
       }
     },
   }
@@ -163,10 +167,18 @@ body {
   padding-bottom: 2%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   z-index: 2;
   -webkit-tap-highlight-color: transparent;
+}
+
+.bottomBtnWeb {
+  justify-content: space-between;
+}
+
+.bottomBtnPhone {
+  justify-content: flex-end;
+  padding-bottom: 5%;
 }
 
 .lang {

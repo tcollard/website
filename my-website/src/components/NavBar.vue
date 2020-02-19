@@ -23,6 +23,7 @@
             <a class="menuTitle" href="#experience" id="experiencePhone">{{ $t('navBar.experience') }}</a>
             <a class="menuTitle" href="#contact" id="contactPhone">{{ $t('navBar.contact') }}</a>
             <a class="menuTitle" @click="downloadCV">CV</a>
+            <LanguageSwitcher  v-if="deviceWidth <= 700" class="lang"></LanguageSwitcher>
         </div>
         <div v-if="this.downloading" class="download">
             <h1 class="question">{{ $t('download.question') }}</h1>
@@ -35,8 +36,13 @@
 </template>
 
 <script>
+    import LanguageSwitcher from './Language.vue';
+
     export default {
         name: 'NavBar',
+        components: {
+            LanguageSwitcher,
+        },
         props: {
             visibleId: {
                 type: String,
@@ -51,6 +57,7 @@
             return {
                 iconPos: 'init',
                 downloading: false,
+                deviceWidth: window.innerWidth,
             };
         },
         created() {
@@ -167,6 +174,12 @@ a {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     color: white !important;
+}
+
+.lang {
+  color: orange;
+  align-self: flex-end;
+  padding-right: 8%; 
 }
 
 @keyframes newColor {
