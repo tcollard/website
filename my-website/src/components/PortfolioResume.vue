@@ -3,9 +3,11 @@
         <h2>{{ $t('portfolio.title') }}</h2>
         <div class="container">
             <div class="project" v-for="(project, index) in projects" :key="index">
-                <div class="title">{{ $t('portfolio.project.' + project.id + '.title') }}</div>
-                <span class="htmlText" v-html="$t('portfolio.project.' + project.id + '.content')"></span>
-                <a class="link text" :href="project.link" target="_blank" rel="noopener">Lien</a>
+                <a class="link" :href="project.link" target="_blank" rel="noopener">
+                    <h3 class="title">{{ $t('portfolio.project.' + project.id + '.title') }}</h3>
+                    <div class="separator"></div>
+                    <span class="htmlText" v-html="$t('portfolio.project.' + project.id + '.content')"></span>
+                </a>
             </div>
         </div>
     </div>
@@ -40,9 +42,20 @@ export default {
 </script>
 
 <style scoped>
+
+    h3 {
+        padding-bottom: 0;
+    }
+
+    .separator {
+        height: 2px;
+        width: 100%;
+        background-color: orange;
+    }
+
     .portfolio {
         text-align: center;
-        padding: 8% 10% 8% 10%;
+        padding: 8% 20% 8% 20%;
     }
 
 
@@ -55,7 +68,7 @@ export default {
 
     .project {
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding: 2%;
     }
 
@@ -77,4 +90,5 @@ export default {
         text-decoration: none;
         color: white;
     }
+
 </style>

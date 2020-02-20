@@ -133,6 +133,15 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 2em;
+  font-weight: 400;
+  padding-bottom: 5%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  margin: 0;
+}
+
 p {
     font-family: 'Roboto';
     font-size: 14px;
@@ -178,7 +187,7 @@ body {
 
 .bottomBtnPhone {
   justify-content: flex-end;
-  padding-bottom: 5%;
+  padding-bottom: 25px;
 }
 
 .lang {

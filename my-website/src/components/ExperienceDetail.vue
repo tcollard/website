@@ -81,15 +81,6 @@ export default {
         opacity: 0;
     }
 
-    h3 {
-        font-size: 2em;
-        font-weight: 400;
-        padding-bottom: 5%;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        margin: 0;
-    }
-    
     h4 {
         font-size: 1.4em;
         font-weight: 400;

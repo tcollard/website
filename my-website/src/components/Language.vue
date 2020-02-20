@@ -35,6 +35,7 @@ export default {
 
     .clickable {
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
 
 </style>

@@ -9,6 +9,7 @@
             <a class="ref" href="#contact" id="contactNav">{{ $t('navBar.contact') }}</a>
         </div>
         <div class="nav-bar-phone">
+            <LanguageSwitcher  v-if="deviceWidth <= 700" class="lang"></LanguageSwitcher>
             <div class="menuIcon" @click="changeIcon">
                 <div id="top" class="bar"></div>
                 <div id="middle1" class="bar"></div>
@@ -23,7 +24,6 @@
             <a class="menuTitle" href="#experience" id="experiencePhone">{{ $t('navBar.experience') }}</a>
             <a class="menuTitle" href="#contact" id="contactPhone">{{ $t('navBar.contact') }}</a>
             <a class="menuTitle" @click="downloadCV">CV</a>
-            <LanguageSwitcher  v-if="deviceWidth <= 700" class="lang"></LanguageSwitcher>
         </div>
         <div v-if="this.downloading" class="download">
             <h1 class="question">{{ $t('download.question') }}</h1>
@@ -259,8 +259,10 @@ a {
     .nav-bar-phone {
         height: 60px;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        justify-content: space-between;
         padding-right: 25px;
+        padding-left: 25px;
         align-items: center;
     }
 
