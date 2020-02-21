@@ -35,9 +35,40 @@ export default {
                     id: 'flutterApp',
                     link: 'https://github.com/tcollard/mySoundApp',
                 },
-            ]
+            ],
+            animationState: false,
         }
-    }
+    },
+    created() {
+        document.addEventListener('scroll',this.isInView);
+    },
+    destroyed() {
+        document.romveEventListener('scroll',this.isInView);
+    },
+    methods: {
+        isInView() {
+            const elPortfolio = document.getElementsByClassName('portfolio')[0];
+            const scroll = window.scrollY || window.pageYOffset
+            const viewport = {
+                top: scroll,
+                bottom: scroll + window.innerHeight,
+            }
+
+            if (elPortfolio.offsetHeight <= viewport.top * .7 && !this.animationState) {
+                this.animationState = true;
+                this.animateProject();
+            }
+        },
+        animateProject() {
+            let projects = document.getElementsByClassName('project');
+            projects.forEach(project => {
+                project.classList.add('animationProject');
+                setTimeout(() => {
+                    project.classList.replace('animationProject', 'visible');
+                }, 1400);
+            });
+        }
+    },
 }
 </script>
 
@@ -66,10 +97,34 @@ export default {
         grid-gap: 10% 10%;
     }
 
+    .container:hover .project{
+        opacity: .2;
+        transition: none;
+    }
+
     .project {
         width: 100%;
         text-align: left;
         padding: 2%;
+        opacity: 0;
+    }
+
+    .animationProject {
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: .8s;
+        transition-delay: .6s;
+        transition-timing-function: ease-in;
+    }
+
+    .visible {
+        opacity: 1;
+        transition: opacity .2s ease-in;
+    }
+    .container .project:hover {
+        transform: scale(1.1);
+        transition: all .3s ease-out;
+        opacity: 1;
     }
 
     .title {
