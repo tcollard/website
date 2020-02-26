@@ -78,10 +78,15 @@ export default {
         padding-bottom: 0;
     }
 
-    .separator {
-        height: 2px;
-        width: 100%;
-        background-color: orange;
+
+    .htmlText >>> .link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .link {
+        text-decoration: none;
+        color: white;
     }
 
     .portfolio {
@@ -89,24 +94,58 @@ export default {
         padding: 8% 20% 8% 20%;
     }
 
-
-    .container {
-        display: grid;
-        grid-template-columns: 45% 45%; 
-        justify-items: center;
-        grid-gap: 10% 10%;
-    }
-
-    .container:hover .project{
-        opacity: .2;
-        transition: none;
-    }
-
-    .project {
+    .separator {
+        height: 2px;
         width: 100%;
-        text-align: left;
-        padding: 2%;
-        opacity: 0;
+        background-color: orange;
+    }
+
+    .title {
+        color: orange;
+    }
+
+    /* Web */
+    @media only screen and (min-width: 700px) {
+        .container {
+            display: grid;
+            grid-template-columns: 45% 45%; 
+            justify-items: center;
+            grid-gap: 10% 10%;
+        }
+
+        .container:hover .project{
+            opacity: .2;
+            transition: none;
+        }
+
+        .container .project:hover {
+            transform: scale(1.1);
+            transition: all .3s ease-out;
+            opacity: 1;
+        }
+
+        .project {
+            width: 100%;
+            text-align: left;
+            padding: 2%;
+            opacity: 0;
+        }
+    }
+
+    /* Phone */
+    @media only screen and (max-width: 700px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project {
+            width: 100%;
+            text-align: left;
+            padding: 10%;
+            opacity: 0;
+        }
     }
 
     .animationProject {
@@ -116,34 +155,9 @@ export default {
         transition-delay: .6s;
         transition-timing-function: ease-in;
     }
-
+    
     .visible {
         opacity: 1;
         transition: opacity .2s ease-in;
     }
-    .container .project:hover {
-        transform: scale(1.1);
-        transition: all .3s ease-out;
-        opacity: 1;
-    }
-
-    .title {
-        color: orange;
-    }
-
-    .img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .link {
-        text-decoration: none;
-        color: white;
-    }
-
-    .htmlText >>> .link {
-        text-decoration: none;
-        color: white;
-    }
-
 </style>

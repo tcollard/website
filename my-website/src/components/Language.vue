@@ -24,6 +24,10 @@ export default {
 </script>
 
 <style scoped>
+    .clickable {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
 
     .container {
         display: flex;
@@ -32,10 +36,4 @@ export default {
         width: 45px;
         margin-left: 2%;
     }
-
-    .clickable {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
-
 </style>

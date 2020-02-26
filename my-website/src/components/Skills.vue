@@ -56,15 +56,6 @@ export default {
 </script>
 
 <style scoped>
-    .skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        padding: 8% 10% 8% 10%;
-    }
-
     .listSkills {
         display: flex;
         flex-direction: column;
@@ -75,5 +66,14 @@ export default {
         width: 100%;
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+    
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 8% 10% 8% 10%;
     }
 </style>

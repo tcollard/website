@@ -74,89 +74,81 @@ export default {
 </script>
 
 <style scoped>
-.progress {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.title {
-    width: 25%;
-    text-align: right;
-}
-
-.bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-    width: 40%;
-}
-.coloredBar {
-    align-self: flex-start;
-    height: 10px;
-}
-
-.barTransition {
-    animation-duration: 2s;
-    animation-delay: .2s;
-    animation-name: loadBar;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-.backTransition {
-    animation-duration: 1s;
-    animation-name: loadBack;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    background-color: rgba(0, 0, 0, 0.3);
-    align-self: left;
-}
-
-.rateTransition {
-    animation-duration: 2s;
-    animation-delay: .2s;
-    animation-name: loadRate;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-@keyframes loadBar {
-    from {
-        opacity: 0;
-        width: 0px;
+    .backTransition {
+        animation-duration: 1s;
+        animation-name: loadBack;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        background-color: rgba(0, 0, 0, 0.3);
+        align-self: left;
     }
-    to {
-        background-color: orange;
-    }
-}
 
-@keyframes loadBack {
-    from {
-        opacity: 0;
-        width: 0px;
+    .bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5%;
+        width: 40%;
     }
-}
 
-@keyframes loadRate {
-    from {
-        content: "0%";
+    .barBackground {
+        width: 100%;
     }
-    to {
-        content: "100%";
+
+    .barTransition {
+        animation-duration: 2s;
+        animation-delay: .2s;
+        animation-name: loadBar;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
-}
 
-.rate {
-    width: 25%;
-    text-align: left;
-    padding-left: 5%;
-}
+    .coloredBar {
+        align-self: flex-start;
+        height: 10px;
+    }
 
-.barBackground {
-    width: 100%;
-}
+    .progress {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rate {
+        width: 25%;
+        text-align: left;
+        padding-left: 5%;
+    }
+    .title {
+        width: 25%;
+        text-align: right;
+    }
+
+    @keyframes loadBack {
+        from {
+            opacity: 0;
+            width: 0px;
+        }
+    }
+
+    @keyframes loadBar {
+        from {
+            opacity: 0;
+            width: 0px;
+        }
+        to {
+            background-color: orange;
+        }
+    }
+
+    @keyframes loadRate {
+        from {
+            content: "0%";
+        }
+        to {
+            content: "100%";
+        }
+    }
 </style>

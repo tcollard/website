@@ -76,11 +76,6 @@ export default {
 
 <style scoped>
 
-    .contentWrapper {
-        width: 100%;
-        opacity: 0;
-    }
-
     h4 {
         font-size: 1.4em;
         font-weight: 400;
@@ -108,6 +103,18 @@ export default {
         padding-bottom: 15%;
     }
 
+    .contentWrapper {
+        width: 100%;
+        opacity: 0;
+    }
+
+
+    .datePhone {
+        display: flex;
+        padding-bottom: 5%;
+        align-items: center;
+    }
+
     .detail {
         display: flex;
         flex-direction: column;
@@ -124,11 +131,6 @@ export default {
         text-align: left;
     }
 
-    .datePhone {
-        display: flex;
-        padding-bottom: 5%;
-        align-items: center;
-    }
 
     .transitionOpacity {
         animation-name: opacityAnimation;

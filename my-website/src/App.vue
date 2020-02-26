@@ -116,8 +116,17 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,bold');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,bold,400');
+
 html{
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #39394C;
+  color: white;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -156,16 +165,13 @@ p {
   flex-direction: column;
 }
 
-body {
-  margin: 0;
+#navbar {
+  position: fixed;
+  width: 100%;
   background-color: #39394C;
-  color: white;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-.fixe {
-  display: block;
+  opacity: 1;
+  top: 0;
+  z-index: 100;
 }
 
 .bottomBtn {
@@ -181,18 +187,22 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-.bottomBtnWeb {
-  justify-content: space-between;
-}
-
 .bottomBtnPhone {
   justify-content: flex-end;
   padding-bottom: 25px;
 }
 
-.lang {
-  color: orange;
-  z-index: 2;
+.bottomBtnWeb {
+  justify-content: space-between;
+}
+
+.component {
+  z-index: 1;
+}
+
+.darkColorBtn {
+  color: #39394C;
+  border-color: #39394C;
 }
 
 .floatingBtn {
@@ -219,29 +229,13 @@ body {
 	line-height:1.3em;
 }
 
-@media only screen and (min-width: 1024px){
-  .floatingBtn:before {
-    transition:transform .5s ease-in;
-  }
-
-  .floatingBtn:hover:before {
-    transform: rotate(360deg);
-  }
+.lang {
+  color: orange;
+  z-index: 2;
 }
 
-.darkColorBtn {
+.langDarkColor {
   color: #39394C;
-  border-color: #39394C;
-
-}
-
-#navbar {
-  position: fixed;
-  width: 100%;
-  background-color: #39394C;
-  opacity: 1;
-  top: 0;
-  z-index: 100;
 }
 
 .text {
@@ -252,11 +246,13 @@ body {
     white-space: pre-line;
 }
 
-.component {
-  z-index: 1;
-}
+@media only screen and (min-width: 1024px){
+  .floatingBtn:before {
+    transition:transform .5s ease-in;
+  }
 
-.langDarkColor {
-  color: #39394C;
+  .floatingBtn:hover:before {
+    transform: rotate(360deg);
+  }
 }
 </style>

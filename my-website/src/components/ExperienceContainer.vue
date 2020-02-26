@@ -21,9 +21,7 @@
                     <div v-if="index != length" class="line" :id="index + '-line'"></div>
                 </div>
             </div>
-            <div class="rightSide">
-                <ExperienceDetail :xp="xp" :index="index" :id="'right'" :deviceWidth="deviceWidth"></experienceDetail>
-            </div>
+            <ExperienceDetail :xp="xp" :index="index" :id="'right'" :deviceWidth="deviceWidth"></experienceDetail>
         </div>
     </div>
 </template>
@@ -93,10 +91,13 @@ export default {
 </script>
 
 <style scoped>
+    .dot {
+        border-radius: 50%;
+        background-color: orange;
+    }
 
-    .time {
+    .leftSide, .rightSide {
         display: flex;
-        flex-direction: row;
     }
 
     .line {
@@ -109,6 +110,23 @@ export default {
         background-color: orange;
     }
 
+    .middle {
+        width: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .middleContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .time {
+        display: flex;
+        flex-direction: row;
+    }
+
     .timeLineView {
         width: 100vw;
         display: flex;
@@ -117,88 +135,6 @@ export default {
     .timeLineViewPhone {
         display: grid;
         grid-template-columns: 10% 90%; 
-    }
-
-    .endLine {
-        width: 2px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .date {
-        font-family: 'Roboto';
-        color: orange;
-        font-weight: 400;
-        font-size: 1.2em;
-        padding-bottom: 2%;
-    }
-
-    .left {
-        text-align: right;
-    }
-
-    .right {
-        text-align: left;
-    }
-
-    /* Web */
-    @media only screen and (min-width: 700px) {
-
-        .middleContainer {
-            width: 8%;
-        }
-
-        .leftSide, .rightSide {
-            width: 46%;
-        }
-    }
-
-    /* Phone */
-    @media only screen and (max-width: 700px) {
-        .middleContainer {
-            width: 12%;
-        }
-
-        .rightSideSide {
-            width: 66%;
-        }
-
-        .leftSide {
-            width: 20%;
-        }
-    }
-
-    .middleContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .middle {
-        width: 2px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .leftSide, .rightSide {
-        display: flex;
-    }
-
-    .dot {
-        border-radius: 50%;
-        background-color: orange;
-    }
-
-    .paused {
-        animation-play-state: paused;
-    }
-
-    .start {
-        animation-play-state: running;
     }
 
     .transitionDot {
@@ -234,6 +170,29 @@ export default {
         }
         to {
             height: 100%;
+        }
+    }
+
+    /* Web */
+    @media only screen and (min-width: 700px) {
+
+        .leftSide, .rightSide {
+            width: 46%;
+        }
+
+        .middleContainer {
+            width: 8%;
+        }
+    }
+
+    /* Phone */
+    @media only screen and (max-width: 700px) {
+        .leftSide {
+            width: 20%;
+        }
+
+        .middleContainer {
+            width: 12%;
         }
     }
 </style>

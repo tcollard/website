@@ -25,6 +25,13 @@ export default {
 </script>
 
 <style scoped>
+    a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+    }
+
     .contact {
         display: flex;
         flex-direction: column;
@@ -37,12 +44,6 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    @media only screen and (min-width: 1024px){
-        .contactText {
-            font-size: 1.4em;
-        }
     }
 
     .contactText {
@@ -58,11 +59,9 @@ export default {
         margin-right: 5%;
     }
 
-    a {
-        display: flex;
-        text-decoration: none;
-        color: white;
-        -webkit-tap-highlight-color: transparent;
+    @media only screen and (min-width: 1024px){
+        .contactText {
+            font-size: 1.4em;
+        }
     }
-
 </style>

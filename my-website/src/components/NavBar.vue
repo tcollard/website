@@ -149,276 +149,272 @@
 </script>
 
 <style scoped>
-
-.ref {
-    cursor: pointer;
-}
-
-a {
-    color: orange;
-    text-decoration: none;
-}
-
-.listItems {
-    display: none;
-    flex-direction: column;
-    font-size: 3em;
-    height: calc(100vh - 60px);
-    width: 100vw;
-    overflow-y: scroll;
-}
-
-.changeColor {
-    animation-name: newColor;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    color: white !important;
-}
-
-.lang {
-  color: orange;
-  align-self: flex-end;
-  padding-right: 8%; 
-}
-
-@keyframes newColor {
-    from {
+    a {
         color: orange;
+        text-decoration: none;
     }
-    to {
+
+    .answer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .answerText {
+        font-family: 'Roboto Slab';
+        font-size: 0.6em;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 1%;
+        background-color: orange;
+        margin: 2%;
+        min-width: 8%;
+        cursor: pointer;
         color: white;
     }
-}
 
-.download {
-    background-color: rgba(0, 0, 0, .7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 3em;
-}
-
-.answer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.answerText {
-    font-family: 'Roboto Slab';
-    font-size: 0.6em;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 1%;
-    background-color: orange;
-    margin: 2%;
-    min-width: 8%;
-    cursor: pointer;
-    color: white;
-}
-
-.question {
-    font-size: 1em;
-    line-height: auto;
-    margin-bottom: 5%;
-    text-align: center;
-}
-
-@media only screen and (min-width: 1024px) {
-    .nav-bar-web {
-        height: 60px;
-        margin-bottom: 15px;
-        margin-top: 15px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        font-size: 1em;
-    }
-
-    .nav-bar-phone {
-        display: none;
-    }
-
-    
-}
-
-@media only screen and (max-width: 1024px) {
-    .nav-bar-web {
-        display: none;
-    }
-
-    .nav-bar-phone {
-        height: 60px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-right: 25px;
-        padding-left: 25px;
-        align-items: center;
-    }
-
-    .menuIcon {
-        width: 2em;
-        height: 2.5em;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .menuIcon:active {
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .bar {
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: white;
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-    }
-
-    .open {
-        display: flex;
-    }
-
-    .close {
-        display: none;
-    }
-
-    .ref {
-        margin-bottom: 10%;
-    }
-
-    #top {
-        top: 22%;
-    }
-
-    #middle1, #middle2 {
-        top: 50%;
-    }
-
-    #bottom {
-        top: 78%;
-    }
-
-    #top.open {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-    }
-
-    .middle1ToCross {
-        animation-name: middle1Cross;
-        animation-duration: .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-    }
-
-    @keyframes middle1Cross {
-        to {
-            transform: rotate(45deg);
-        }
-    }
-
-    .middle1ToInit {
-        animation-name: middle1Init;
-        animation-duration: .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-    }
-
-    @keyframes middle1Init {
-        from {
-            transform: rotate(45deg);
-        }
-        to {
-            transform: rotate(0deg);
-        }
-    }
-
-    .middle2ToCross {
-        animation-name: middle2Cross;
-        animation-duration: .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-    }
-
-    @keyframes middle2Cross {
-        to {
-            transform: rotate(-45deg);
-        }
-    }
-
-    .middle2ToInit {
-        animation-name: middle2Init;
-        animation-duration: .3s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in;
-    }
-
-    @keyframes middle2Init {
-        from {
-            transform: rotate(-45deg)
-        }
-        to {
-            transform: rotate(0deg);
-        }
-    }
-
-    .hideBar {
-        animation-name: hideAnimation;
+    .changeColor {
+        animation-name: newColor;
         animation-duration: .5s;
         animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in;
+        color: white !important;
     }
 
-    @keyframes hideAnimation {
-        to {
-            opacity: 0;
-        }
+    .download {
+        background-color: rgba(0, 0, 0, .7);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 3em;
     }
 
-    .showBar {
-        animation-name: showAnimation;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
+    .listItems {
+        display: none;
+        flex-direction: column;
+        font-size: 3em;
+        height: calc(100vh - 60px);
+        width: 100vw;
+        overflow-y: scroll;
     }
 
-    @keyframes showAnimation {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    .lang {
+      color: orange;
+      align-self: flex-end;
+      padding-right: 8%; 
     }
 
-    .menuTitle {
+    .question {
         font-size: 1em;
-        font-weight: 400;
+        line-height: auto;
         margin-bottom: 5%;
         text-align: center;
     }
 
-    .fullScreen {
-        height: 100%;
+    .ref {
+        cursor: pointer;
     }
 
-    .initNav {
-        height: 60px;
+    @keyframes newColor {
+        from {
+            color: orange;
+        }
+        to {
+            color: white;
+        }
     }
 
-}
+    @media only screen and (min-width: 1024px) {
+        .nav-bar-phone {
+            display: none;
+        }
+
+        .nav-bar-web {
+            height: 60px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 1em;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        #bottom {
+            top: 78%;
+        }
+
+        #middle1, #middle2 {
+            top: 50%;
+        }
+
+        #top {
+            top: 22%;
+        }
+
+        #top.open {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .close {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: white;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+        }
+
+        .fullScreen {
+            height: 100%;
+        }
+
+        .hideBar {
+            animation-name: hideAnimation;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        .initNav {
+            height: 60px;
+        }
+
+        .menuIcon {
+            width: 2em;
+            height: 2.5em;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menuIcon:active {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .menuTitle {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        .middle1ToCross {
+            animation-name: middle1Cross;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .middle1ToInit {
+            animation-name: middle1Init;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .middle2ToCross {
+            animation-name: middle2Cross;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .middle2ToInit {
+            animation-name: middle2Init;
+            animation-duration: .3s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .nav-bar-phone {
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 25px;
+            padding-left: 25px;
+            align-items: center;
+        }
+
+        .nav-bar-web {
+            display: none;
+        }
+
+        .open {
+            display: flex;
+        }
+
+        .ref {
+            margin-bottom: 10%;
+        }
+
+        .showBar {
+            animation-name: showAnimation;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes hideAnimation {
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes middle1Cross {
+            to {
+                transform: rotate(45deg);
+            }
+        }
+
+        @keyframes middle1Init {
+            from {
+                transform: rotate(45deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes middle2Cross {
+            to {
+                transform: rotate(-45deg);
+            }
+        }
+
+        @keyframes middle2Init {
+            from {
+                transform: rotate(-45deg)
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes showAnimation {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
 </style>
