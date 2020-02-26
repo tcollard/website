@@ -185,6 +185,7 @@ p {
   align-items: center;
   z-index: 2;
   -webkit-tap-highlight-color: transparent;
+  pointer-events: none;
 }
 
 .bottomBtnPhone {
@@ -200,10 +201,6 @@ p {
   z-index: 1;
 }
 
-.darkColorBtn {
-  color: #39394C;
-  border-color: #39394C;
-}
 
 .floatingBtn {
   color:orange;
@@ -218,6 +215,7 @@ p {
 	transition:all .3s ease-out;
   z-index: 2;
   margin-right: 2%;
+  pointer-events: all;
 }
 
 .floatingBtn:before {
@@ -229,9 +227,15 @@ p {
 	line-height:1.3em;
 }
 
+.darkColorBtn {
+  color: #39394C;
+  border-color: #39394C;
+}
+
 .lang {
   color: orange;
   z-index: 2;
+  pointer-events: all;
 }
 
 .langDarkColor {
