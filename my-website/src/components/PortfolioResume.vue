@@ -54,10 +54,17 @@ export default {
                 bottom: scroll + window.innerHeight,
             }
 
+          if (window.innerWidth > 480) {
             if (elPortfolio.offsetHeight <= viewport.top * .7 && !this.animationState) {
                 this.animationState = true;
                 this.animateProject();
             }
+          } else {
+            if (elPortfolio.offsetHeight <= viewport.top && !this.animationState) {
+                this.animationState = true;
+                this.animateProject();
+            }
+          }
         },
         animateProject() {
             let projects = document.getElementsByClassName('project');
