@@ -33,7 +33,7 @@ export default {
                 },
                 {
                     id: 'flutterApp',
-                    link: 'https://github.com/tcollard/mySoundApp',
+                    link: 'https://github.com/tcollard/fluttterSoundApp',
                 },
             ],
             animationState: false,

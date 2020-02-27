@@ -167,7 +167,7 @@
         text-align: center;
         font-weight: bold;
         border-radius: 10px;
-        padding: 1%;
+        padding: 10px;
         background-color: orange;
         margin: 2%;
         min-width: 8%;
