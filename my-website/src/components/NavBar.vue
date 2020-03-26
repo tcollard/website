@@ -220,6 +220,32 @@
 
     .ref {
         cursor: pointer;
+        animation-name: changeSizeOnHoverLeave;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;        
+    }
+
+    .ref:hover {
+        animation-name: changeSizeOnHoverEnter;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+
+    @keyframes changeSizeOnHoverEnter {
+        to {
+            font-size: 1.5em;
+        }
+    }
+
+    @keyframes changeSizeOnHoverLeave {
+        from {
+            font-size: 1.5em;
+        }
+        to {
+            font-size: 1em;
+        }
     }
 
     @keyframes newColor {

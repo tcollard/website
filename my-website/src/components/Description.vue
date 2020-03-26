@@ -21,7 +21,7 @@ export default {
     }   
     
     .descriptionContent {
-        padding: 2%;
+        padding: 0% 2% 0% 2%;
         text-align: center;
     }   
     

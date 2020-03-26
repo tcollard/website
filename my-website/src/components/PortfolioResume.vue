@@ -102,7 +102,7 @@ export default {
     }
 
     .separator {
-        height: 2px;
+        height: 1px;
         width: 100%;
         background-color: orange;
     }

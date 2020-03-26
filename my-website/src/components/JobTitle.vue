@@ -1,7 +1,7 @@
 <template>
     <div class="title">
         <h1 class="name">THIBAULT COLLARD</h1>
-        <p class="post">Dev full stack JS</p>
+        <h3 class="post">{{ $t('jobTitle.post')}}</h3>
     </div>
 </template>
 
@@ -14,9 +14,6 @@ export default {
 <style scoped>
     .post {
         color: orange;
-        font-size: 3.2em;
-        font-weight: 400;
-        line-height: 1em;
     }
     
     .title {

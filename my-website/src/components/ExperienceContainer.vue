@@ -101,7 +101,7 @@ export default {
     }
 
     .line {
-        width: 2px;
+        width: 1px;
         margin-left: 5%;
         margin-right: 5%;
         display: flex;
@@ -111,7 +111,7 @@ export default {
     }
 
     .middle {
-        width: 2px;
+        width: 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -159,8 +159,8 @@ export default {
             width: 2px;
         }
         to {
-            height: 20px;
-            width: 20px;
+            height: 17px;
+            width: 17px;
         }
     }
 
