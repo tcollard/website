@@ -32,8 +32,12 @@ export default {
                     link: 'https://francoiscorbel.com/night-crawlerz/',
                 },
                 {
-                    id: 'flutterApp',
+                    id: 'mymic',
                     link: 'https://github.com/tcollard/fluttterSoundApp',
+                },
+                {
+                    id: "snake",
+                    link: "https://github.com/tcollard/snake",
                 },
             ],
             animationState: false,

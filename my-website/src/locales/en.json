@@ -73,9 +73,13 @@
                 "title": "GAME JAM",
                 "content": "<p>Making a game at the Global Game Jam, with: <br> <a class=\"link\" href=\"https://francoiscorbel.com/\" target=\"_blank\" rel=\"noopener\">Francçois Corbel (Dev / Game Designer)</a>, <a class=\"link\" href=\"http://www.luciencoycault.fr/\" target=\"_blank\" rel=\"noopener\">Lucien Coycault (Graphic Designer)</a>, <a class=\"link\" href=\"https://soundcloud.com/fed-j\" target=\"_blank\" rel=\"noopener\">Jeff Guerin (Sound Designer)</a></p>"
             },
-            "flutterApp": {
-                "title": "FLUTTER APP",
+            "mymic": {
+                "title": "MYMIC",
                 "content": "<p>Developed an application that can record and play sounds (Flutter / Dart)</p>"
+            },
+            "snake": {
+                "title": "SNAKE",
+                "content": "<p>Good old-fashioned snake with a touch of jazz snake (Flutter / Dart)</p>"
             }
         }
     },
@@ -83,6 +87,4 @@
         "yes": "Yes",
         "no": "No"
     }
-
-
 }
