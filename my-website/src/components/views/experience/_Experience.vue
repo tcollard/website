@@ -17,6 +17,7 @@
 
 <script>
 import ExperienceContainer from "./ExperienceContainer.vue";
+import { experiences } from "../../../data/data.js";
 
 export default {
   name: "Experience",
@@ -25,7 +26,7 @@ export default {
   },
   data() {
     return {
-      experiences: ["neocity", "iota", "42", "whv", "cepi", "cdb"],
+      experiences,
       state: false,
     };
   },

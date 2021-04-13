@@ -11,11 +11,17 @@
     },
     "experience": {
         "title": "Experience",
+        "equisafe": {
+            "date": "2020 - now",
+            "company": "Equisafe",
+            "job": "Developer frontend",
+            "content": "Participation in the development of the platform dedicated to managers and their partners. Worked on Vue.js (front) and Django (Back)"
+        },
         "neocity": {
             "date": "2019",
             "company": "Neocity",
             "job": "Developer fullStack",
-            "content": " Realization of cross-platform applications for city dwellers, via Cordova / Ionic, as well as a web administration interface.\nUse of Angular for the applications and Node.js for the API" 
+            "content": "Realization of cross-platform applications for city dwellers, via Cordova / Ionic, as well as a web administration interface.\nUse of Angular for the applications and Node.js for the API"
         },
         "iota": {
             "date": "2018",

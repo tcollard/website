@@ -11,6 +11,12 @@
     },
     "experience": {
         "title": "Expérience",
+        "equisafe": {
+            "date": "2020 - maintenant",
+            "company": "Equisafe",
+            "job": "Développeur Frontend",
+            "content": "Participation au développement de la plateforme dédiée aux dirigeants et à leurs associés. Utilisation de Vue.js (front) and Django (Back)"
+        },
         "neocity": {
             "date": "2019",
             "company": "Neocity",

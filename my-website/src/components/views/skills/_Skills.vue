@@ -11,6 +11,7 @@
 
 <script>
 import ProgressBar from "./ProgressBar.vue";
+import { skills } from "../../../data/data.js";
 
 export default {
   name: "Skills",
@@ -19,36 +20,7 @@ export default {
   },
   data() {
     return {
-      skills: [
-        {
-          name: "ANGULAR",
-          rate: 65,
-        },
-        {
-          name: "C",
-          rate: 80,
-        },
-        {
-          name: "DART /FLUTTER",
-          rate: 60,
-        },
-        {
-          name: "HTML / CSS",
-          rate: 75,
-        },
-        {
-          name: "JS / NODE.JS",
-          rate: 70,
-        },
-        {
-          name: "UNIX / SHELL",
-          rate: 80,
-        },
-        {
-          name: "VUE.JS",
-          rate: 65,
-        },
-      ],
+      skills,
     };
   },
 };
