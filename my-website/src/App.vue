@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <NavBar id="navbar" :visibleId="this.selectedId" :allEl="this.allId"></NavBar>
+    <NavBar
+      id="navbar"
+      :visibleId="this.selectedId"
+      :allEl="this.allId"
+    ></NavBar>
     <JobTitle class="component" id="jobTitle"></JobTitle>
     <Description class="component" id="description"></Description>
     <Skills class="component" id="skills"></Skills>
@@ -8,26 +12,34 @@
     <Experience class="component" id="experience"></Experience>
     <Contact class="component" id="contact"></Contact>
     <InfoBottom class="component"></InfoBottom>
-    <div class="component bottomBtn" id="bottomBtn" :class="deviceWidth > 700 ? 'bottomBtnWeb'  : 'bottomBtnPhone'">
-      <LanguageSwitcher  v-if="deviceWidth > 700" id="language" class="lang"></LanguageSwitcher>
+    <div
+      class="component bottomBtn"
+      id="bottomBtn"
+      :class="deviceWidth > 700 ? 'bottomBtnWeb' : 'bottomBtnPhone'"
+    >
+      <LanguageSwitcher
+        v-if="deviceWidth > 700"
+        id="language"
+        class="lang"
+      ></LanguageSwitcher>
       <a id="scrollBtn" v-scroll-to="'#navbar'" class="floatingBtn"></a>
     </div>
   </div>
 </template>
 
 <script>
-import Contact from './components/Contact.vue'
-import Description from './components/Description.vue'
-import Experience from './components/Experience.vue'
-import InfoBottom from './components/InfoBottom.vue';
-import JobTitle from './components/JobTitle.vue'
-import LanguageSwitcher from './components/Language.vue'
-import NavBar from './components/NavBar.vue'
-import PortfolioResume from './components/PortfolioResume.vue'
-import Skills from './components/Skills.vue'
+import Contact from "./components/views/contact/Contact.vue";
+import Description from "./components/views/description/Description.vue";
+import Experience from "./components/views/experience/_Experience.vue";
+import InfoBottom from "./components/utils/InfoBottom.vue";
+import JobTitle from "./components/utils/JobTitle.vue";
+import LanguageSwitcher from "./components/utils/Language.vue";
+import NavBar from "./components/utils/NavBar.vue";
+import PortfolioResume from "./components/views/portfolio/PortfolioResume.vue";
+import Skills from "./components/views/skills/_Skills.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Contact,
     Description,
@@ -41,96 +53,101 @@ export default {
   },
   data() {
     return {
-      allId: ['description', 'skills', 'portfolio', 'experience', 'contact'],
+      allId: ["description", "skills", "portfolio", "experience", "contact"],
       selectedId: null,
       deviceWidth: window.innerWidth,
-    }
+    };
   },
   created() {
-    document.addEventListener('scroll', this.isInView);
+    document.addEventListener("scroll", this.isInView);
   },
   destroyed() {
-    document.removeEventListener('scroll', this.isInView);
+    document.removeEventListener("scroll", this.isInView);
   },
   methods: {
     isInView() {
-      const elContact = document.getElementById('contact');
-      const scroll = window.scrollY || window.pageYOffset
+      const elContact = document.getElementById("contact");
+      const scroll = window.scrollY || window.pageYOffset;
       const viewport = {
         top: scroll,
         bottom: scroll + window.innerHeight,
-      }
+      };
 
       this.jobTitleChanger(scroll);
       this.menuItemChanger(viewport);
       this.changeColor(elContact, viewport);
-
     },
     jobTitleChanger(scroll) {
-      let elJobTitle = document.getElementById('jobTitle');
-      let elDescription = document.getElementById('description');
+      let elJobTitle = document.getElementById("jobTitle");
+      let elDescription = document.getElementById("description");
       let ratio = 0;
-      
+
       if (window.innerWidth > 480) {
-          ratio = ((scroll + elJobTitle.offsetHeight) *.75 - elDescription.offsetTop *.9) / 100;
+        ratio =
+          ((scroll + elJobTitle.offsetHeight) * 0.75 -
+            elDescription.offsetTop * 0.9) /
+          100;
       } else {
-          ratio = (scroll + elJobTitle.offsetHeight - elDescription.offsetTop) / 100;
+        ratio =
+          (scroll + elJobTitle.offsetHeight - elDescription.offsetTop) / 100;
       }
       if (1 - ratio + 0.1 > 0.1) {
-        elJobTitle.style.opacity = (1 - ratio + 0.1 >= 1) ? 1 : 1 - ratio + 0.1;
-        document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 >= 1) ? 1 : 1 - ratio + 0.1;
+        elJobTitle.style.opacity = 1 - ratio + 0.1 >= 1 ? 1 : 1 - ratio + 0.1;
+        document.getElementsByClassName("post")[0].style.opacity =
+          1 - ratio + 0.1 >= 1 ? 1 : 1 - ratio + 0.1;
       } else {
         elJobTitle.style.opacity = 0.1;
-        document.getElementsByClassName('post')[0].style.opacity = (1 - ratio + 0.1 <= 0) ? 0 : 1 - ratio + 0.1;
+        document.getElementsByClassName("post")[0].style.opacity =
+          1 - ratio + 0.1 <= 0 ? 0 : 1 - ratio + 0.1;
       }
     },
     menuItemChanger(viewport) {
       for (let index = 0; index < this.allId.length; index++) {
-          let el = document.getElementById(this.allId[index]);
+        let el = document.getElementById(this.allId[index]);
         if (el.offsetTop >= viewport.top && el.offsetTop <= viewport.bottom) {
-            this.selectedId = this.allId[index];
-          return ;
+          this.selectedId = this.allId[index];
+          return;
         }
       }
     },
-    changeColor(elContact, viewport){
-      let elScroll = document.getElementById('scrollBtn');
-      let elBottomBtn = document.getElementById('bottomBtn');
+    changeColor(elContact, viewport) {
+      let elScroll = document.getElementById("scrollBtn");
+      let elBottomBtn = document.getElementById("bottomBtn");
       let elLang = null;
       if (this.deviceWidth > 700) {
-        elLang = document.getElementById('language');
+        elLang = document.getElementById("language");
       }
-      
+
       if (elContact.offsetTop <= viewport.top + elBottomBtn.offsetTop) {
-        if (elLang) elLang.classList.add('langDarkColor');
-        elScroll.classList.add('darkColorBtn');
-      } else if (elScroll.classList.contains('darkColorBtn')) {
-        if (elLang) elLang.classList.remove('langDarkColor');
-        elScroll.classList.remove('darkColorBtn');
+        if (elLang) elLang.classList.add("langDarkColor");
+        elScroll.classList.add("darkColorBtn");
+      } else if (elScroll.classList.contains("darkColorBtn")) {
+        if (elLang) elLang.classList.remove("langDarkColor");
+        elScroll.classList.remove("darkColorBtn");
       }
     },
-  }
-}
+  },
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,bold');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,bold,400');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,bold");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,bold,400");
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: #39394C;
+  background-color: #39394c;
   color: white;
   width: 100vw;
   overflow-x: hidden;
 }
 
 h1 {
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-weight: bold;
   color: white;
 }
@@ -152,15 +169,15 @@ h3 {
 }
 
 p {
-    font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 300;
-    white-space: pre-line;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  white-space: pre-line;
 }
 
 #app {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: column;
 }
@@ -168,7 +185,7 @@ p {
 #navbar {
   position: fixed;
   width: 100%;
-  background-color: #39394C;
+  background-color: #39394c;
   opacity: 1;
   top: 0;
   z-index: 100;
@@ -201,35 +218,34 @@ p {
   z-index: 1;
 }
 
-
 .floatingBtn {
-  color:orange;
+  color: orange;
   cursor: pointer;
-	text-decoration:none;
+  text-decoration: none;
   border: solid 3px orange;
   border-radius: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-	transition:all .3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 2;
   margin-right: 2%;
   pointer-events: all;
 }
 
 .floatingBtn:before {
-  content:'▲';
+  content: "▲";
   text-align: center;
-	font-size:1.9em;
-	width:1.5em;
-	height:1.5em;
-	line-height:1.3em;
+  font-size: 1.9em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.3em;
 }
 
 .darkColorBtn {
-  color: #39394C;
-  border-color: #39394C;
+  color: #39394c;
+  border-color: #39394c;
 }
 
 .lang {
@@ -239,20 +255,20 @@ p {
 }
 
 .langDarkColor {
-  color: #39394C;
+  color: #39394c;
 }
 
 .text {
-    font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 300;
-    white-space: pre-line;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  white-space: pre-line;
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) {
   .floatingBtn:before {
-    transition:transform .5s ease-in;
+    transition: transform 0.5s ease-in;
   }
 
   .floatingBtn:hover:before {
